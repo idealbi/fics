@@ -162,6 +162,10 @@ if ($conn)
  						 </form>
                    				</div>
 				</div>
+				 <font style='font-size:12px;color:gray'>
+                  <strong>Q1-Q4 :</strong>".$row['Behavioural']."- (".$row['BehaviouralValue'].")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q1-37 : </strong>".$row['Language']."- (".$row['LanguageValue']." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+                  <strong>Q11 : </strong>".$row['CheckedLanguageValue']."- (".$row['CheckedLanguage'].")<br>
+                       Date:". $row['QnsDate']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :" . $row['email']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID : ".$row['qnr_data_ref']."</font>
 			</div>
 		</div>
 	</td> </tr>";
