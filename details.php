@@ -130,7 +130,7 @@ img_logo {
     <div class="col-sm-3"> 
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
-          <font face = "Verdana" size = "2">test-file path
+          <font face = "Verdana" size = "2">test-img path
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
@@ -330,7 +330,7 @@ $result = sqlsrv_query($conn, $sql_p);
 <br> 
 <a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
 
-<embed src="/data/CISF_FICSBehaviourPattern.pdf" type="application/pdf"   height="600px" width="500">
+<img src="/img_data/CISF_FICSBehaviourPattern.png" alt="" width="100%" height="600">
 </div>
 
 
