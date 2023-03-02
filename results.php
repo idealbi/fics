@@ -140,7 +140,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
  
 if ($conn)
 {
-	echo "connected12345678 <br>";
+	echo "connected-email <br>";
 	$sql = "SELECT * FROM fics.Results";
 	$result = sqlsrv_query($conn, $sql);
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
@@ -166,7 +166,7 @@ if ($conn)
                   <strong>Q1-Q4 :</strong> ".$row['Behavioural']."- (".$row['BehaviouralValue'].")
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q1-37 : </strong>".$row['Language']."- (".$row['LanguageValue']."
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q11 : </strong>".$row['CheckedLanguageValue']."- (".$row['CheckedLanguage'].")<br> 
-		  Date:".$row['CheckedLanguageValue']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID :
+		  Date:".$row['CheckedLanguageValue']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email : ".$row['email']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID :
                   </font>
 			</div>
 		</div>
