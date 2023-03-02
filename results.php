@@ -166,7 +166,7 @@ if ($conn)
                   <strong>Q1-Q4 :</strong> ".$row['Behavioural']."- (".$row['BehaviouralValue'].")
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q1-37 : </strong>".$row['Language']."- (".$row['LanguageValue']."
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q11 : </strong>".$row['CheckedLanguageValue']."- (".$row['CheckedLanguage'].")<br> 
-		  Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID :
+		  Date:".$row['CheckedLanguageValue']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID :
                   </font>
 			</div>
 		</div>
