@@ -130,7 +130,7 @@ img_logo {
     <div class="col-sm-3"> 
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
-          <font face = "Verdana" size = "2">test-table
+          <font face = "Verdana" size = "2">test-file
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
@@ -142,7 +142,7 @@ echo "Failed to connect to MySQL: " ;
 }
 	$sql = "SELECT * FROM fics.Results  where qnr_data_ref='".$ref_id."'";
 	$result_p = sqlsrv_query($conn, $sql);
-echo  $ref_id." - to connect to MySQL: " ;
+
  while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
             {
 	 
@@ -322,7 +322,7 @@ $result = sqlsrv_query($conn, $sql_p);
 
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    
+    <?php echo $Behaviouralfile;?>
     <embed
     src="<?php echo $Behaviouralfile;?>#toolbar=0&navpanes=0&scrollbar=0"
     type="application/pdf"
