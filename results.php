@@ -134,24 +134,15 @@ img_logo {
      
      
    <?php
-$phpconnect = mysqli_connect("localhost","questionnairekar_app","questionnairekar_app","questionnairekar_fics");
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
  
-if (mysqli_connect_errno())
+if ($conn)
 {
-echo "Connection Failed; " . mysqli_connect_error();
-}
-else
-{
-
- 
-$phpdatabase = "select  * from fics_new_result_vw";
-$result = mysqli_query($phpconnect, $phpdatabase);
- 
- 
- 
- if ($result->num_rows > 0)
-{
-while($row = $result->fetch_assoc()) 
+	$sql = "SELECT * FROM fics.Results";
+	$result = sqlsrv_query($conn, $sql);
+ while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 {
    echo "  <tr>
         <td>
@@ -189,9 +180,7 @@ else
 {
 	echo "No resurrlts";
 }
-}
 
-mysqli_close($phpconnect);
 
 ?>  
      
