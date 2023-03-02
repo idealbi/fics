@@ -11,7 +11,7 @@ if( $conn )
      $sql = "SELECT  [TestColumn]FROM [dbo].[Test1]";
      $result = sqlsrv_query($conn, $sql);
      while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-              echo "Test Table : ".$row."<br>" ;
+              echo "Test Table : ".$row['TestColumn']."<br>" ;
           }
    }
    else{
