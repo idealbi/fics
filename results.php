@@ -140,7 +140,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
  
 if ($conn)
 {
-	echo "connected1234567 <br>";
+	echo "connected12345678 <br>";
 	$sql = "SELECT * FROM fics.Results";
 	$result = sqlsrv_query($conn, $sql);
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
