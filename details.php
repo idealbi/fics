@@ -130,7 +130,7 @@ img_logo {
     <div class="col-sm-3"> 
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
-          <font face = "Verdana" size = "2">test-refid
+          <font face = "Verdana" size = "2">test-row_p
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
@@ -143,8 +143,9 @@ echo "Failed to connect to MySQL: " ;
 	$sql = "SELECT * FROM fics.Results  where qnr_data_ref='".$ref_id."'";
 	$result_p = sqlsrv_query($conn, $sql);
 echo  $ref_id." - to connect to MySQL: " ;
- while($row = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
+ while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
             {
+	 
               $Name=$row_p['FullName'];
               $Cellnum=$row_p['contactnumber'];
               $Language = $row_p['CheckedLanguage'];
