@@ -151,11 +151,8 @@ if ($conn)
 			<div class='card-body'>
 				<p class='fw-bold'>" . $row['FullName']. "</p>
 					<div class='row'>
-				".$row['email'].
-		
-		
-		
-		"		</div>
+					<div class='col'>Behavioural : <b>" .$row['Behavioural']."</b> - (".$row['BehaviouralValue'].")</div>
+				</div>
 			</div>
 		</div>
 	</td> </tr>";
