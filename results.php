@@ -140,19 +140,24 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
  
 if ($conn)
 {
-	echo "connected <br>";
+	echo "connected1 <br>";
 	$sql = "SELECT * FROM fics.Results";
 	$result = sqlsrv_query($conn, $sql);
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
-	echo "  <tr> <td>
-	<div class='card'>
-	".$row['email'].
+	echo " 
+	<tr> <td>
+		<div class='card'>
+			<div class='card-body'>
+				<p class='fw-bold'>" . $row['FullName']. "</p>
+				".$row['email'].
 		
 		
 		
-		"</div>
-		</td> </tr>";
+		"
+			</div>
+		</div>
+	</td> </tr>";
    
 		}
 }
