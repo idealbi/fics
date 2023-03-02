@@ -130,7 +130,7 @@ img_logo {
     <div class="col-sm-3"> 
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
-          <font face = "Verdana" size = "2">test-file
+          <font face = "Verdana" size = "2">test-file path
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
