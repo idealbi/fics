@@ -145,36 +145,7 @@ if ($conn)
 	$result = sqlsrv_query($conn, $sql);
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
-	echo "  <tr>
-        <td>
-            
-        <div class='card'>
-                <div class='card-body'>
-                    <p class='fw-bold'>" . $row['FullName']. "</p>
-                   
-                    <div class='row'>
-                    
-                        <div class='col'>Behavioural : <b>" .$row['Behavioural']."</b> - (".$row['BehaviouralValue'].")</div>
-                    <div class='col'> Language : <b>".$row['Language']."</b> - (".$row['LanguageValue'].")</div>
-                    <div class='col'>
-                        <form   action='details.php' method ='post' class='row gy-2 gx-3 align-items-center'>
-  <div class='col-auto'>
-   <input type=text' class='form-control' id='autoSizingInputGroup' name ='ref' value='".$row['qnr_data_ref']."'hidden  >
-   
-    <button type='submit' class='btn btn-success btn-sm'>View Details</button>
-  </div> 
-  </form>
-                    </div>
-                  </div>
-                  <font style='font-size:12px;color:gray'>
-                  <strong>Q1-Q4 :</strong>".$row['Behavioural']."- (".$row['BehaviouralValue'].")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q1-37 : </strong>".$row['Language']."- (".$row['LanguageValue']." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
-                  <strong>Q11 : </strong>".$row['CheckedLanguageValue']."- (".$row['CheckedLanguage'].")<br>
-                       Date:". $row['QnsDate']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :" . $row['email']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID : ".$row['qnr_data_ref']."</font>
-                </div>
-        </div>
- </td>
-        
-      </tr>";
+	echo "  <tr> <td> ".$row['email']."</td> </tr>";
    
 		}
 }
