@@ -149,9 +149,9 @@ echo "Failed to connect to MySQL: " ;
               $Name=$row_p['FullName'];
               $Cellnum=$row_p['contactnumber'];
               $Language = $row_p['Language'];
-            $Languagefile = "data/".$row_p['Language']."_SW4Languageindicator.pdf";
+            $Languagefile = "/img_data/".$row_p['Language']."_SW4Languageindicator.png";
                $Behavioural= $row_p['Behavioural'];
-             $Behaviouralfile = "data/".$row_p['Behavioural']."_FICSBehaviourPattern.pdf";
+             $Behaviouralfile = "/img_data/".$row_p['Behavioural']."_FICSBehaviourPattern.png";
             $QnsDate=$row_p['QnsDate'];
                 
             }?> 
@@ -323,14 +323,7 @@ $result = sqlsrv_query($conn, $sql_p);
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <?php echo $Behaviouralfile;?>
-    <embed
-    src="/data/CISF_FICSBehaviourPattern.pdf#toolbar=0&navpanes=0&scrollbar=0"
-    type="application/pdf"
-    frameBorder="0"
-    scrolling="auto"
-    height="600"
-    width="100%"
->df</embed>
+<img src="/img_data/CISF_FICSBehaviourPattern.png" alt="" width="100%" height="600">
 
 
 
