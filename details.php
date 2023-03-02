@@ -324,7 +324,7 @@ $result = sqlsrv_query($conn, $sql_p);
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <?php echo $Behaviouralfile;?>
     <embed
-    src="data/CISF_FICSBehaviourPattern.pdf#toolbar=0&navpanes=0&scrollbar=0"
+    src="/data/CISF_FICSBehaviourPattern.pdf#toolbar=0&navpanes=0&scrollbar=0"
     type="application/pdf"
     frameBorder="0"
     scrolling="auto"
