@@ -132,16 +132,17 @@ img_logo {
    
           <font face = "Verdana" size = "2">
       <?php
-$con=mysqli_connect("localhost","questionnairekar_app","questionnairekar_app","questionnairekar_fics");
-$ref_id =  $_POST["ref"];
-// Check connection
-if (mysqli_connect_errno())
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn->connect_error)
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
+	$sql = "SELECT * FROM fics.Results  where qnr_data_ref='".$ref_id."'";
+	$result_p = sqlsrv_query($conn, $sql);
 
-$result_p = mysqli_query($con,"SELECT * FROM `fics_result_vw` where qnr_data_ref='".$ref_id."'  ORDER BY `qnr_data_ref` ASC");
-while($row_p = mysqli_fetch_array($result_p))
+ while($row = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
             {
               $Name=$row_p['FullName'];
               $Cellnum=$row_p['contactnumber'];
@@ -182,9 +183,9 @@ $BehaviouralDownFileName=$Name."_".$ref_id."_".$QnsDate."_".$Behavioural."_Behav
     <?php
 
 // Check connection
-if (mysqli_connect_errno())
+if ($conn->connect_error)
 {
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
+echo "Failed to connect to MySQL: " ;
 }
 
 
@@ -203,8 +204,11 @@ $red_4= array(14);
 $yellow_4 = array(6,8,12);
 $blue_4 = array(5,10,13,15);
 
-$result = mysqli_query($con,"SELECT * FROM `qnr_data` where qnr_data_ref='".$ref_id."'  ORDER BY `Question` ASC");
-while($row = mysqli_fetch_array($result))
+ $sql_p = "SELECT * FROM fics.[Qnr_Data]  where qnr_data_ref='".$ref_id."'";
+
+$result = sqlsrv_query($conn, $sql_p);
+
+ while($row = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
             {
                 $q_num = $row['Question'];
                 if($q_num <18)
@@ -304,7 +308,7 @@ while($row = mysqli_fetch_array($result))
    
             }
             
-     mysqli_close($con);
+  
 ?>
          </tbody>
              </table>
