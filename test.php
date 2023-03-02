@@ -8,10 +8,10 @@ if( $conn )
 {
      
      echo "Connection established....quering db now<br />";
-     $sql = "SELECT  [TestColumn]FROM [dbo].[Test1]";
+     $sql = "SELECT  * FROM fics.Results";
      $result = sqlsrv_query($conn, $sql);
      while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-              echo "Test Table : ".$row['TestColumn']."<br>" ;
+              echo "Test Table : ".$row['email']."<br>" ;
           }
    }
    else{
