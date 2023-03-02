@@ -130,7 +130,7 @@ img_logo {
     <div class="col-sm-3"> 
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
-          <font face = "Verdana" size = "2">test-row_p
+          <font face = "Verdana" size = "2">test-table
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
@@ -148,8 +148,8 @@ echo  $ref_id." - to connect to MySQL: " ;
 	 
               $Name=$row_p['FullName'];
               $Cellnum=$row_p['contactnumber'];
-              $Language = $row_p['CheckedLanguage'];
-            $Languagefile = "data/".$row_p['CheckedLanguage']."_SW4Languageindicator.pdf";
+              $Language = $row_p['Language'];
+            $Languagefile = "data/".$row_p['Language']."_SW4Languageindicator.pdf";
                $Behavioural= $row_p['Behavioural'];
              $Behaviouralfile = "data/".$row_p['Behavioural']."_FICSBehaviourPattern.pdf";
             $QnsDate=$row_p['QnsDate'];
@@ -210,7 +210,7 @@ $blue_4 = array(5,10,13,15);
 
 $result = sqlsrv_query($conn, $sql_p);
 
- while($row = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
+ while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
             {
                 $q_num = $row['Question'];
                 if($q_num <18)
