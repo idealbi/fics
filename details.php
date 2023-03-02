@@ -337,7 +337,7 @@ $result = sqlsrv_query($conn, $sql_p);
 <br> 
 <a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
 
-<embed src="data/CISF_FICSBehaviourPattern.pdf" type="application/pdf"   height="700px" width="500">
+<embed src="/data/CISF_FICSBehaviourPattern.pdf" type="application/pdf"   height="700px" width="500">
 </div>
 
 
