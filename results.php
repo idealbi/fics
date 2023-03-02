@@ -145,7 +145,14 @@ if ($conn)
 	$result = sqlsrv_query($conn, $sql);
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
-	echo "  <tr> <td> ".$row['email']."</td> </tr>";
+	echo "  <tr> <td>
+	<div class='card'>
+	".$row['email'].
+		
+		
+		
+		"</div>
+		</td> </tr>";
    
 		}
 }
