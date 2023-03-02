@@ -323,14 +323,14 @@ $result = sqlsrv_query($conn, $sql_p);
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <?php echo $Behaviouralfile;?>
-<img src="/img_data/CISF_FICSBehaviourPattern.png" alt="" width="100%" height="600">
+<img src="/img_data/CISF_FICSBehaviourPattern.png" alt="" width="80%" height="400">
 
 
 
 <br> 
 <a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
-
-<img src="/img_data/CISF_FICSBehaviourPattern.png" alt="" width="100%" height="600">
+<?php echo $LanguageDownFileName;?>
+<img src="/img_data/CISF_FICSBehaviourPattern.png" alt="" width="80%" height="400">
 </div>
 
 
