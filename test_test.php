@@ -180,11 +180,14 @@ $array_length = count($array_ref);
 echo " Tests  results3 : ".$array_length."<br>";
 
 
+$fruits = array("apple", "banana", "orange");
+
 $i = 0;
-while ($i < $array_length) {
-  echo "Array : ".$array_ref[$i] . "<br>";
+while ($i < count($fruits)) {
+  echo $fruits[$i] . "<br>";
   $i++;
 }
+
 
 
 ?>
