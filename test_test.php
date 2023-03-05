@@ -163,13 +163,13 @@ if ($conn->connect_error)
 {
 echo "Failed to connect to MySQL: " ;
 }
-	$sql = "SELECT distinct cast([companyid] as varchar)as companyid FROM [fics].[Company]";
+	$sql = "SELECT distinct  division FROM [fics].[Division]";
 	$result_p = sqlsrv_query($conn, $sql);
 $array_ref = array();
  while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
             {
 	 
-    $array_ref[] = $row['companyid'];
+    $array_ref[] = $row['division'];
                 
             }?>     
    <?php
@@ -190,7 +190,7 @@ while ($i < $array_length) {
 ?>
 
 
-<h1>Cascading Dropdown Example</h1>
+<h1>Cascading Dropdown Example division</h1>
 
 <form name="form1" id="form1" action="/action_page.php">
 <select id="dropdown1" onchange="getDivision()">>
