@@ -116,10 +116,23 @@ function getDivision() {
   var dropdown1 = document.getElementById("dropdown1");
   var dropdown2 = document.getElementById("dropdown2");
   dropdown2.innerHTML = "";
-  
+<?php
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo); 
+	?>
   if (dropdown1.value == "1") {
-    dropdown2.add(new Option("Option a", "a"));
-    dropdown2.add(new Option("Option b", "b"));
+	  <?php
+	  $sql_div = "SELECT distinct  division,divisionid FROM [fics].[Division] where CompanyID=1";
+	 $result_div = sqlsrv_query($conn, $sql_div);
+	
+	 while($row_div = sqlsrv_fetch_array($result_div, SQLSRV_FETCH_ASSOC))
+		    {
+
+	    echo " dropdown2.add(new Option('". $row_div['division']."', '". $row_div['division']."'));";
+
+		    }?> 
+
   }
   else if (dropdown1.value == "2") {
     dropdown2.add(new Option("Option c", "c"));
@@ -191,9 +204,26 @@ while ($i < count($fruits)) {
 echo "test : ".$array_ref[0]
 
 ?>
+<?php
+$favcolor = "red";
+
+switch ($favcolor) {
+  case "red":
+    echo "Your favorite color is red!";
+    break;
+  case "blue":
+    echo "Your favorite color is blue!";
+    break;
+  case "green":
+    echo "Your favorite color is green!";
+    break;
+  default:
+    echo "Your favorite color is neither red, blue, nor green!";
+}
+?>
 
 
-<h1>Cascading Dropdown Example division</h1>
+<h1>Cascading Dropdown Example dynmic div</h1>
 
 <form name="form1" id="form1" action="/action_page.php">
 <select id="dropdown1" onchange="getDivision()">>
