@@ -133,7 +133,7 @@ img_logo {
    <form id="regForm" action="complete.php" method="post">
   <h1>Questionnaire</h1>
   <!-- One "tab" for each step in the form: -->
-  <div class="tab"><p class="fw-bold">Instructions 1:</p>
+  <div class="tab"><p class="fw-bold">Instructions :</p>
     <p>
 In each question you are required to choose the sentence that best describes you, in order
 of preference, down to the sentence that least describes you.</p>
