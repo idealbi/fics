@@ -188,7 +188,7 @@ while ($i < count($fruits)) {
   $i++;
 }
 
-
+echo "test : ".$array_ref[0]
 
 ?>
 
