@@ -182,7 +182,7 @@ echo " Tests  results3 : ".$array_length."<br>";
 
 $i = 0;
 while ($i < $array_length) {
-  echo $array_ref[$i] . "<br>";
+  echo "Array : ".$array_ref[$i] . "<br>";
   $i++;
 }
 
