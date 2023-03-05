@@ -179,7 +179,7 @@ $array_ref = array();
 $array_length = count($array_ref);
 echo " Tests  results3 : ".$array_length."<br>";
 foreach ($array_ref as $value) {
-	 echo "$value <br>";
+	 echo "Value : ".$value." <br>";
 }
 ?>
 
