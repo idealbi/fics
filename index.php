@@ -165,11 +165,16 @@ of preference, down to the sentence that least describes you.</p>
   </div>
 </div>
   <div class="row">
-      
-      <?php
-   $num = rand();
-  echo" <p><input  name='ref' value ='".$num."' hidden ></p>";
-  ?>
+	    <div class="col">
+		<select name="company">
+		 <option value="none">--Select Company-- </option>
+		</select>
+	   </div>
+	    <div class="col">
+		    <select name="division">
+			<option value="none">--Select Division-- </option>
+		    </select>
+	  </div>
   </div>
 <br>
   <div class="row">
