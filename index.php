@@ -153,18 +153,7 @@ of preference, down to the sentence that least describes you.</p>
   </div>
   </div>
   <div class="tab"><p class="fw-bold">Contact Info:</p>
-<p class="fst-italic text-danger">Name, Surname Required ,Contact Number Optional</p>
-  <div class="row">
-      
-  <div class="col">
-    <input type="text" class="form-control" name="fname" placeholder="First name" aria-label="First name">
-  </div>
-  <div class="col">
-     
-    <input type="text" class="form-control" name="lname" placeholder="Last name" aria-label="Last name">
-  </div>
-</div>
-  <div class="row">
+<div class="row">
 	    <div class="col">
 		<label for="company">Select a category:</label>
 <select id="company">
@@ -186,6 +175,17 @@ of preference, down to the sentence that least describes you.</p>
 	  </div>
   </div>
 <br>
+  <div class="row">
+      
+  <div class="col">
+    <input type="text" class="form-control" name="fname" placeholder="First name" aria-label="First name">
+  </div>
+  <div class="col">
+     
+    <input type="text" class="form-control" name="lname" placeholder="Last name" aria-label="Last name">
+  </div>
+</div>
+  
   <div class="row">
   <div class="col">
       N.B. All communication from FICS will be done through email !!!
