@@ -177,10 +177,26 @@ of preference, down to the sentence that least describes you.</p>
 <div class="row">
 	    <div class="col">
 		<label for="dropdown1">Select a Company:</label>
-<select id="dropdown1" class="form-select" onchange="getDivision()">>
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
-  <option value="3">Option 3</option>
+<select id="dropdown1" class="form-select" onchange="getDivision()">
+	 <?php
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+
+if ($conn->connect_error)
+{
+echo "Failed to connect to MySQL: " ;
+}
+	$sql = "SELECT [companyid] ,[Company] FROM [fics].[Company] ";
+	$result_p = sqlsrv_query($conn, $sql);
+
+ while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
+            {
+	 
+             echo "<option value='".$row_p['companyid']."'>".$row_p['Company']."</option>"
+                
+            }?> 
+  
 </select>
  </div>
 	<div class="col">
