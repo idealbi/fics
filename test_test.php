@@ -121,7 +121,7 @@ $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database"
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo); 
 	?>
-  if (dropdown1.value == "1") {
+  var selectedCompany = dropdown1.value 
 	  <?php
 	  $sql_div = "SELECT distinct  division,divisionid FROM [fics].[Division] where CompanyID=1";
 	 $result_div = sqlsrv_query($conn, $sql_div);
@@ -133,14 +133,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 		    }?> 
 
-  }
-  else if (dropdown1.value == "2") {
-    dropdown2.add(new Option("Option c", "c"));
-  }
-  else if (dropdown1.value == "3") {
-    dropdown2.add(new Option("Option b", "b"));
-    dropdown2.add(new Option("Option c", "c"));
-  }
+ 
 }
 
 
@@ -223,7 +216,7 @@ switch ($favcolor) {
 ?>
 
 
-<h1>Cascading Dropdown Example dynmic div</h1>
+<h1>Cascading Dropdown Example dynmic div test</h1>
 
 <form name="form1" id="form1" action="/action_page.php">
 <select id="dropdown1" onchange="getDivision()">>
