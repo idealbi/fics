@@ -166,14 +166,23 @@ of preference, down to the sentence that least describes you.</p>
 </div>
   <div class="row">
 	    <div class="col">
-		<select name="company" class="form-control">
-		 <option value="none">--Select Company-- </option>
-		</select>
+		<label for="company">Select a category:</label>
+<select id="company">
+  <option value="category-1">Category 1</option>
+  <option value="category-2">Category 2</option>
+  <option value="category-3">Category 3</option>
+</select>
 	   </div>
 	    <div class="col">
-		    <select name="division" class="form-control">
-			<option value="none">--Select Division-- </option>
-		    </select>
+		    <label for="division">Select an option:</label>
+<select id="division">
+  <option value="option-1" data-category="category-1">Option 1 (Category 1)</option>
+  <option value="option-2" data-category="category-2">Option 2 (Category 2)</option>
+  <option value="option-3" data-category="category-3">Option 3 (Category 3)</option>
+  <option value="option-4" data-category="category-1">Option 4 (Category 1)</option>
+  <option value="option-5" data-category="category-2">Option 5 (Category 2)</option>
+  <option value="option-6" data-category="category-3">Option 6 (Category 3)</option>
+</select>
 	  </div>
   </div>
 <br>
@@ -185,7 +194,7 @@ of preference, down to the sentence that least describes you.</p>
   <div class="col">
       Optional
       <br>
-    <input type="text" class="form-control" name="phone" placeholder="Contact Number" aria-label="Contact Number">
+    <input type="text" class="form-control" name="phone" placeholder="Contact Number" aria-label="Contact Number" not re>
   </div>
 </div>
     <br>
@@ -513,6 +522,29 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
+const firstSelect = document.getElementById('company');
+const secondSelect = document.getElementById('division');
+
+firstSelect.addEventListener('change', () => {
+  const selectedCategory = firstSelect.value;
+  
+  // Remove all options from the second select element
+  secondSelect.innerHTML = '';
+
+  // Loop through all options in the second select element
+  for (let i = 0; i < secondSelect.options.length; i++) {
+    const option = secondSelect.options[i];
+    
+    // If the option's data-category attribute matches the selected category, add it to the second select element
+    if (option.getAttribute('data-category') === selectedCategory) {
+      const newOption = document.createElement('option');
+      newOption.text = option.text;
+      newOption.value = option.value;
+      secondSelect.add(newOption);
+    }
+  }
+});
+
 </script>
   </body>
 </html>
