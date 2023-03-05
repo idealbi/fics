@@ -163,7 +163,7 @@ if ($conn->connect_error)
 {
 echo "Failed to connect to MySQL: " ;
 }
-	$sql = "SELECT distinct [companyid] as companyid FROM [fics].[Company]";
+	$sql = "SELECT distinct cast([companyid] as varchar)as companyid FROM [fics].[Company]";
 	$result_p = sqlsrv_query($conn, $sql);
 $array_ref = array();
  while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
