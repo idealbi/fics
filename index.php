@@ -193,7 +193,7 @@ echo "Failed to connect to MySQL: " ;
  while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
             {
 	 
-             echo "<option value='".$row_p['companyid']."'>".$row_p['Company']."</option>"
+             echo "<option value='".$row_p['companyid']."'>".$row_p['Company']."</option>";
                 
             }?> 
   
