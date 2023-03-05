@@ -203,7 +203,7 @@ of preference, down to the sentence that least describes you.</p>
     <input type="text" class="form-control" name="lname" placeholder="Last name" aria-label="Last name">
   </div>
 </div>
-  
+  <br>
   <div class="row">
   <div class="col">
       
