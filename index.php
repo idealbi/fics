@@ -115,6 +115,27 @@ img_logo {
   border: 1px solid #aaaaaa;
 }
 </style>
+<script>
+function getDivision() {
+  var dropdown1 = document.getElementById("dropdown1");
+  var dropdown2 = document.getElementById("dropdown2");
+  dropdown2.innerHTML = "";
+  
+  if (dropdown1.value == "1") {
+    dropdown2.add(new Option("Option a", "a"));
+    dropdown2.add(new Option("Option b", "b"));
+  }
+  else if (dropdown1.value == "2") {
+    dropdown2.add(new Option("Option c", "c"));
+  }
+  else if (dropdown1.value == "3") {
+    dropdown2.add(new Option("Option b", "b"));
+    dropdown2.add(new Option("Option c", "c"));
+  }
+}
+
+
+</script>	  
   </head>
   <body>
     
@@ -155,24 +176,21 @@ of preference, down to the sentence that least describes you.</p>
   <div class="tab"><p class="fw-bold">Contact Info:</p>
 <div class="row">
 	    <div class="col">
-		<label for="company">Select a category:</label>
-<select id="company">
-  <option value="category-1">Category 1</option>
-  <option value="category-2">Category 2</option>
-  <option value="category-3">Category 3</option>
+		<label for="dropdown1">Select a Company:</label>
+<select id="dropdown1" onchange="getDivision()">>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
 </select>
-	   </div>
-	    <div class="col">
-		    <label for="division">Select an option:</label>
-<select id="division">
-  <option value="option-1" data-category="category-1">Option 1 (Category 1)</option>
-  <option value="option-2" data-category="category-2">Option 2 (Category 2)</option>
-  <option value="option-3" data-category="category-3">Option 3 (Category 3)</option>
-  <option value="option-4" data-category="category-1">Option 4 (Category 1)</option>
-  <option value="option-5" data-category="category-2">Option 5 (Category 2)</option>
-  <option value="option-6" data-category="category-3">Option 6 (Category 3)</option>
+ </div>
+	<div class="col">
+		<label for="dropdown2">Select a Division:</label>
+<select id="dropdown2">
+  <option value="a">Option a</option>
+  <option value="b">Option b</option>
+  <option value="c">Option c</option>
 </select>
-	  </div>
+ </div>
   </div>
 <br>
   <div class="row">
