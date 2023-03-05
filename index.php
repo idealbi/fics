@@ -177,7 +177,7 @@ of preference, down to the sentence that least describes you.</p>
 <div class="row">
 	    <div class="col">
 		<label for="dropdown1">Select a Company:</label>
-<select id="dropdown1" onchange="getDivision()">>
+<select id="dropdown1" class="form-select" onchange="getDivision()">>
   <option value="1">Option 1</option>
   <option value="2">Option 2</option>
   <option value="3">Option 3</option>
@@ -185,7 +185,7 @@ of preference, down to the sentence that least describes you.</p>
  </div>
 	<div class="col">
 		<label for="dropdown2">Select a Division:</label>
-<select id="dropdown2">
+<select id="dropdown2" class="form-select">
   <option value="a">Option a</option>
   <option value="b">Option b</option>
   <option value="c">Option c</option>
@@ -206,12 +206,12 @@ of preference, down to the sentence that least describes you.</p>
   
   <div class="row">
   <div class="col">
-      N.B. All communication from FICS will be done through email !!!
+      
     <input type="text" class="form-control" name="email" placeholder="E-mail" aria-label="email">
   </div>
   <div class="col">
-      Optional
-      <br>
+     
+    
     <input type="text" class="form-control" name="phone" placeholder="Contact Number" aria-label="Contact Number" not re>
   </div>
 </div>
