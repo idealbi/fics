@@ -166,12 +166,12 @@ of preference, down to the sentence that least describes you.</p>
 </div>
   <div class="row">
 	    <div class="col">
-		<select name="company">
+		<select name="company" class="form-control">
 		 <option value="none">--Select Company-- </option>
 		</select>
 	   </div>
 	    <div class="col">
-		    <select name="division">
+		    <select name="division" class="form-control">
 			<option value="none">--Select Division-- </option>
 		    </select>
 	  </div>
