@@ -33,6 +33,6 @@ for ($x = 0; $x <= $Ismulty; $x++) {
 sqlsrv_query( $conn,$p_info_division_insert);
   echo "saveeed divions <br>";
 }
-	sqlsrv_commit( $conn )
+	sqlsrv_commit( $conn );
 }
 ?>
