@@ -165,7 +165,7 @@ echo " Tests  tabs : ".$array_length."<br>";
       	  <div class="card">
   <h5 class="card-header">Set Up Client Company</h5>
   <div class="card-body">
-    
+    <form name="clientSetup">
     <div class="mb-3">
   
   <input type="text" class="form-control" id="formCompnay" placeholder="Company">
@@ -175,6 +175,10 @@ echo " Tests  tabs : ".$array_length."<br>";
   <input type="text" class="form-control" id="formDivision" placeholder="Division">
 </div>
   </div>
+		  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
 </div>
     </div>
     <div class="col-6">
@@ -187,6 +191,7 @@ echo " Tests  tabs : ".$array_length."<br>";
     
     <div class="row g-3">
  <div class="col-md-6">
+	 </form name="frmResults">
    <select id="inputState" class="form-select">
       <option selected>Choose Company...</option>
       <option>...</option>
@@ -201,7 +206,10 @@ echo " Tests  tabs : ".$array_length."<br>";
 </div>
 	    <br>
   </div>
-    <a href="#" class="btn btn-primary">View Results</a>
+    <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
   </div>
 </div>
     </div>
