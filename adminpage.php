@@ -162,7 +162,20 @@ echo " Tests  tabs : ".$array_length."<br>";
 <div class="container overflow-hidden">
   <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding1</div>
+      	  <div class="card">
+  <h5 class="card-header">Set Up Client Company</h5>
+  <div class="card-body">
+    
+    <div class="mb-3">
+  
+  <input type="text" class="form-control" id="formCompnay" placeholder="Company">
+</div>
+<div class="mb-3">
+	<p class="fst-italic">if more than 1 division enter comma separated list eg(Div1,Div2..)</p>
+  <input type="text" class="form-control" id="formDivision" placeholder="Division">
+</div>
+  </div>
+</div>
     </div>
     <div class="col-6">
       <div class="card">
