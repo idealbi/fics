@@ -115,27 +115,23 @@ img_logo {
   border: 1px solid #aaaaaa;
 }
 </style>
-<script>
-function getDivision() {
-  var dropdown1 = document.getElementById("dropdown1");
-  var dropdown2 = document.getElementById("dropdown2");
-  dropdown2.innerHTML = "";
-  
-  if (dropdown1.value == "1") {
-    dropdown2.add(new Option("Option a", "a"));
-    dropdown2.add(new Option("Option b", "b"));
-  }
-  else if (dropdown1.value == "2") {
-    dropdown2.add(new Option("Option c", "c"));
-  }
-  else if (dropdown1.value == "3") {
-    dropdown2.add(new Option("Option b", "b"));
-    dropdown2.add(new Option("Option c", "c"));
-  }
+
+<script type="text/javascript">
+function fetch_select(val)
+{
+ $.ajax({
+ type: 'post',
+ url: 'fetch_data.php',
+ data: {
+  get_option:val
+ },
+ success: function (response) {
+  document.getElementById("new_select").innerHTML=response; 
+ }
+ });
 }
 
-
-</script>	  
+</script>  
   </head>
   <body>
     
