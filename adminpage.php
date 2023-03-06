@@ -205,7 +205,12 @@ echo " Tests  tabs : ".$array_length."<br>";
   </div>
 </div>
     </div>
-
+<div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding3</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding4</div>
+    </div>
  
   </div>
 </div>
