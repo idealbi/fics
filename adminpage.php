@@ -162,7 +162,16 @@ echo " Tests  tabs : ".$array_length."<br>";
 <div class="container">
   <div class="row g-2">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column1 padding</div>
+      <div class="p-3 border bg-light"><div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div></div>
     </div>
     <div class="col-6">
       <div class="p-3 border bg-light">Custom column padding</div>
