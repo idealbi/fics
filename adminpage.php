@@ -214,7 +214,7 @@ echo " Tests  tabs : ".$array_length."<br>";
 </div>
 	    <br>
   </div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">View Results</a>
   </div>
 </div></div>
     </div>
