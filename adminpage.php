@@ -174,10 +174,11 @@ echo " Tests  tabs : ".$array_length."<br>";
 	<p class="fst-italic">if more than 1 division enter comma separated list eg(Div1,Div2..)</p>
   <input type="text" class="form-control" id="formDivision" placeholder="Division">
 </div>
+	    <div class="col-12">
+    <button type="submit" class="btn btn-primary">Save</button>
   </div>
-		  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
+		  
 </form>
 </div>
     </div>
@@ -207,7 +208,7 @@ echo " Tests  tabs : ".$array_length."<br>";
 	    <br>
   </div>
     <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">View Results</button>
   </div>
 </form>
   </div>
