@@ -10,4 +10,7 @@ echo "Number : ".$Ismulty;
 echo "<br>";
 echo "explode1 :".$array_divs[0];
 echo "<br>";
+for ($x = 0; $x <= $Ismulty; $x++) {
+  echo "The number is: $array_divs[$x] <br>";
+}
 ?>
