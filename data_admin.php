@@ -3,7 +3,7 @@
 	<br>Cell Number : <?php 
 	    echo $_POST["formDivision"]; ?></p>
   <?php 
-$companyid =$_POST["companyid"];
+$companyid =strval($_POST["companyid"]);
 $company =$_POST["formCompnay"];
 $div= $_POST["formDivision"];
 $array_divs = explode(',',$div);
@@ -24,7 +24,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if ($conn)
 {
-$p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company])VALUES ('12345','TestCompany')";
+$p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company])VALUES ('".$companyid."','".$company."')";
 sqlsrv_query( $conn,$p_info_data_insert);
 	echo "saveeed";
 }
