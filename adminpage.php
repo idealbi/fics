@@ -126,8 +126,7 @@ img_logo {
 <br>
 <div class="card">
   <div class="card-body">
-<input class="form-control" id="myInput" type="text" placeholder="Search..">
-  <br>
+
  
     <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
@@ -219,7 +218,19 @@ echo " Tests  tabs : ".$array_length."<br>";
 </div>
     </div>
 <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding3</div>
+      <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Candidate Name
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">Bootstrap</a></li>
+      <li><a href="#">Angular</a></li>
+    </ul>
+  </div>
     </div>
     <div class="col-6">
       <div class="p-3 border bg-light">Custom column padding4</div>
@@ -235,16 +246,16 @@ echo " Tests  tabs : ".$array_length."<br>";
    </div>   
    
    
-   <script>
+
+<script>
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
+    $(".dropdown-menu li").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
 });
 </script>
-
   </body>
 </html>
