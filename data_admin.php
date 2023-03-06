@@ -21,11 +21,11 @@ $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database"
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
  
+
 if ($conn)
 {
-$p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company])
- VALUES ('12345','TestCompany')";
+$p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company])VALUES ('12345','TestCompany')";
 sqlsrv_query( $conn,$p_info_data_insert);
-	echo "saved"
+	echo "saveeed";
 }
 ?>
