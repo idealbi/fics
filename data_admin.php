@@ -4,7 +4,10 @@
 	    echo $_POST["formDivision"]; ?></p>
   <?php 
 $div= $_POST["formDivision"];
+$array_divs = explode(',',$div);
 $Ismulty = substr_count($div, ',');
 echo "Number : ".$Ismulty;
-echo "explode :".explode(',',$div);
+echo "<br>";
+echo "explode1 :".$array_divs[0];
+echo "<br>";
 ?>
