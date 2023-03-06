@@ -26,9 +26,14 @@ if ($conn)
 {
 $p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company],IsActive)VALUES ('".$companyid."','".$company."',1)";
 sqlsrv_query( $conn,$p_info_data_insert);
-$p_info_division_insert = "INSERT INTO [fics].[Division] ([CompanyID],[Division])VALUES(CompanyID,Division)VALUES ('".$companyid."','TestDivision')";
+
+}
+
+if($conn)
+{
+$p_info_division_insert = "INSERT INTO [fics].[Division] ([CompanyID],[Division])VALUES ('".$companyid."','TestDivision')";
 sqlsrv_query( $conn,$p_info_division_insert);
   echo "saved divions <br>";
 sqlsrv_commit( $conn );
-}
+}	
 ?>
