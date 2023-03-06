@@ -165,9 +165,12 @@ echo " Tests  tabs : ".$array_length."<br>";
       	  <div class="card">
   <h5 class="card-header">Set Up Client Company</h5>
   <div class="card-body">
-    <form name="clientSetup">
+    <form name="clientSetup" id="clientSetup" action="data.php" method="post">
     <div class="mb-3">
-  
+  <?php
+   $num = rand();
+  echo" <p><input  name='companyid' value ='".$num."' hidden ></p>";
+  ?>
   <input type="text" class="form-control" id="formCompnay" placeholder="Company">
 </div>
 <div class="mb-3">
@@ -192,7 +195,8 @@ echo " Tests  tabs : ".$array_length."<br>";
     
     <div class="row g-3">
  <div class="col-md-6">
-	 </form name="frmResults">
+
+	    <form name="frmResults" id="frmResults" action="data.php" method="post">
    <select id="inputState" class="form-select">
       <option selected>Choose Company...</option>
       <option>...</option>
