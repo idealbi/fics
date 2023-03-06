@@ -206,10 +206,16 @@ echo " Tests  tabs : ".$array_length."<br>";
     
     <div class="row g-3">
   <div class="col">
-    <input type="text" class="form-control" placeholder="Company" aria-label="First name">
-  </div>OR
+   <select id="inputState" class="form-select">
+      <option selected>Choose Company...</option>
+      <option>...</option>
+    </select>
+  </div>
   <div class="col">
-    <input type="text" class="form-control" placeholder="Division" aria-label="Last name">
+    <select id="inputState" class="form-select">
+      <option selected>Choose Division...</option>
+      <option>...</option>
+    </select>
   </div>
 </div>
 	    <br>
