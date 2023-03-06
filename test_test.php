@@ -236,6 +236,41 @@ switch ($favcolor) {
 
 </form>  
  
+<hr>
+	  <select id="first-select">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+
+<select id="second-select">
+  <option value="1a">Option 1a</option>
+  <option value="1b">Option 1b</option>
+  <option value="2a">Option 2a</option>
+  <option value="2b">Option 2b</option>
+  <option value="3a">Option 3a</option>
+  <option value="3b">Option 3b</option>
+</select>
+
+<script>
+  const firstSelect = document.getElementById('first-select');
+  const secondSelect = document.getElementById('second-select');
+  
+  // listen for a change event on the first select element
+  firstSelect.addEventListener('change', () => {
+    // get the selected value of the first select element
+    const selectedValue = firstSelect.value;
+    
+    // update the options of the second select element based on the selected value
+    if (selectedValue === '1') {
+      secondSelect.value = '1a'; // select Option 1a
+    } else if (selectedValue === '2') {
+      secondSelect.value = '2a'; // select Option 2a
+    } else if (selectedValue === '3') {
+      secondSelect.value = '3a'; // select Option 3a
+    }
+  });
+</script>
 
   </div>
    </div>
