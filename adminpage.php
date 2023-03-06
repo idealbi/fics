@@ -201,13 +201,14 @@ echo " Tests  tabs : ".$array_length."<br>";
       <div class="p-3 border bg-light"><div class="card">
   <h5 class="card-header">Featured</h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">Select Company and  or with Division to view Results</p>
     <div class="col-md-4">
     <label for="inputState" class="form-label">State</label>
     <select id="inputState" class="form-select">
       <option selected>Choose Company...</option>
       <option>...</option>
     </select>
+	    <br>
   </div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
