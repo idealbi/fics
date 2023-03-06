@@ -171,7 +171,7 @@ echo " Tests  tabs : ".$array_length."<br>";
   <input type="text" class="form-control" id="formCompnay" placeholder="Company">
 </div>
 <div class="mb-3">
-	<p>if more than 1 division enter comma separated list eg(Div1,Div2....</p>
+	<p class="fst-italic">if more than 1 division enter comma separated list eg(Div1,Div2..)</p>
   <input type="text" class="form-control" id="formDivision" placeholder="Division">
 </div>
   </div>
@@ -199,19 +199,20 @@ echo " Tests  tabs : ".$array_length."<br>";
     </div>
     <div class="col-6">
       <div class="p-3 border bg-light"><div class="card">
-  <h5 class="card-header">Featured</h5>
+  <h5 class="card-header">View Results</h5>
   <div class="card-body">
     <p class="card-text">Select Company (and or with Division) to view Results</p>
+	  <p class="fst-italic">To view ALL results leave blank</p>
     <div class="col-md-4">
     
     <div class="row g-3">
-  <div class="col">
+ <div class="col-md-6">
    <select id="inputState" class="form-select">
       <option selected>Choose Company...</option>
       <option>...</option>
     </select>
   </div>
-  <div class="col">
+ <div class="col-md-6">
     <select id="inputState" class="form-select">
       <option selected>Choose Division...</option>
       <option>...</option>
