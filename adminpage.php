@@ -167,12 +167,12 @@ echo " Tests  tabs : ".$array_length."<br>";
   <div class="card-body">
     
     <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  
+  <input type="text" class="form-control" id="formCompnay" placeholder="Company">
 </div>
 <div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+ 
+  <input type="text" class="form-control" id="formDivision" placeholder="Division">
 </div>
   </div>
 </div></div>
@@ -205,7 +205,7 @@ echo " Tests  tabs : ".$array_length."<br>";
     <div class="col-md-4">
     <label for="inputState" class="form-label">State</label>
     <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
+      <option selected>Choose Company...</option>
       <option>...</option>
     </select>
   </div>
