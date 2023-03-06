@@ -36,6 +36,7 @@ for ($x = 0; $x <= $Ismulty; $x++) {
 	$p_info_division_insert = "INSERT INTO [fics].[Division] ([CompanyID],[Division])VALUES ('".$companyid."','".$div_name."')";
 	sqlsrv_query( $conn,$p_info_division_insert);
 	echo "saved divions <br>";
+}
 
 }	
 ?>
