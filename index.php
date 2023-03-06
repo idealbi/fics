@@ -121,7 +121,7 @@ function fetch_select(val)
 {
  $.ajax({
  type: 'post',
- url: 'fetch_data.php',
+ url: 'fetch_data_users.php',
  data: {
   get_option:val
  },
