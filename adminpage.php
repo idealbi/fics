@@ -171,7 +171,7 @@ echo " Tests  tabs : ".$array_length."<br>";
   <input type="text" class="form-control" id="formCompnay" placeholder="Company">
 </div>
 <div class="mb-3">
- 
+	<p>if more than 1 division enter comma separated list eg(Div1,Div2....</p>
   <input type="text" class="form-control" id="formDivision" placeholder="Division">
 </div>
   </div>
