@@ -123,7 +123,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	?>
   var selectedCompany = dropdown1.value 
 	  <?php
-	  $sql_div = "SELECT distinct  [Division],[DivisionID] FROM [fics].[Division] where CompanyID="325395622";
+	  $sql_div = "SELECT distinct  [Division],[DivisionID] FROM [fics].[Division] where CompanyID='325395622'";
 	 $result_div = sqlsrv_query($conn, $sql_div);
 	
 	 while($row_div = sqlsrv_fetch_array($result_div, SQLSRV_FETCH_ASSOC))
