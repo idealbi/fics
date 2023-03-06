@@ -165,7 +165,32 @@ echo " Tests  tabs : ".$array_length."<br>";
       <div class="p-3 border bg-light">Custom column padding1</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding2</div>
+      <div class="card">
+  <h5 class="card-header">View Results</h5>
+  <div class="card-body">
+    <p class="card-text">Select Company (and or with Division) to view Results</p>
+	  <p class="fst-italic">To view ALL results leave blank</p>
+    <div class="col-md-4">
+    
+    <div class="row g-3">
+ <div class="col-md-6">
+   <select id="inputState" class="form-select">
+      <option selected>Choose Company...</option>
+      <option>...</option>
+    </select>
+  </div>
+ <div class="col-md-6">
+    <select id="inputState" class="form-select">
+      <option selected>Choose Division...</option>
+      <option>...</option>
+    </select>
+  </div>
+</div>
+	    <br>
+  </div>
+    <a href="#" class="btn btn-primary">View Results</a>
+  </div>
+</div>
     </div>
 
  
