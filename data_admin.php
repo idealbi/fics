@@ -26,10 +26,10 @@ if ($conn)
 {
 $p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company],IsActive)VALUES ('".$companyid."','".$company."',1)";
 sqlsrv_query( $conn,$p_info_data_insert);
-	echo "saveeed";
-for ($x = 0; $x <= $Ismulty; $x++) {
 	
-	$p_info_division_insert = "INSERT INTO [fics].[Division] ([CompanyID],[Division])VALUES(CompanyID,Division)VALUES ('".$companyid."','".$array_divs[$x]."')";
+for ($x = 0; $x <= $Ismulty; $x++) {
+	$div_name=$array_divs[$x];
+	$p_info_division_insert = "INSERT INTO [fics].[Division] ([CompanyID],[Division])VALUES(CompanyID,Division)VALUES ('".$companyid."','".$div_name."')";
 sqlsrv_query( $conn,$p_info_division_insert);
   echo "saveeed divions <br>";
 }
