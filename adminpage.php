@@ -159,75 +159,22 @@ $array_length = count($array_ref);
      
 echo " Tests  tabs : ".$array_length."<br>";
 ?>
-<div class="container">
-  <div class="row g-2">
+<div class="container overflow-hidden">
+  <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3 border bg-light"><div class="card">
-  <h5 class="card-header">Set Up Client Company</h5>
-  <div class="card-body">
-    
-    <div class="mb-3">
-  
-  <input type="text" class="form-control" id="formCompnay" placeholder="Company">
-</div>
-<div class="mb-3">
-	<p class="fst-italic">if more than 1 division enter comma separated list eg(Div1,Div2..)</p>
-  <input type="text" class="form-control" id="formDivision" placeholder="Division">
-</div>
-  </div>
-</div></div>
+      <div class="p-3 border bg-light">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light"><div class="card">
-  <h5 class="card-header">Featured</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div></div>
+      <div class="p-3 border bg-light">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light"><div class="card">
-  <h5 class="card-header">Featured</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div></div>
+      <div class="p-3 border bg-light">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light"><div class="card">
-  <h5 class="card-header">View Results</h5>
-  <div class="card-body">
-    <p class="card-text">Select Company (and or with Division) to view Results</p>
-	  <p class="fst-italic">To view ALL results leave blank</p>
-    <div class="col-md-4">
-    
-    <div class="row g-3">
- <div class="col-md-6">
-   <select id="inputState" class="form-select">
-      <option selected>Choose Company...</option>
-      <option>...</option>
-    </select>
-  </div>
- <div class="col-md-6">
-    <select id="inputState" class="form-select">
-      <option selected>Choose Division...</option>
-      <option>...</option>
-    </select>
-  </div>
-</div>
-	    <br>
-  </div>
-    <a href="#" class="btn btn-primary">View Results</a>
-  </div>
-</div></div>
+      <div class="p-3 border bg-light">Custom column padding</div>
     </div>
   </div>
 </div>
-  
  
 
   </div>
