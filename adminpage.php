@@ -162,17 +162,13 @@ echo " Tests  tabs : ".$array_length."<br>";
 <div class="container overflow-hidden">
   <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Custom column padding1</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Custom column padding2</div>
     </div>
-    <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
-    </div>
+
+ 
   </div>
 </div>
  
