@@ -141,7 +141,22 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
 </script>	  
-	  
+<script type="text/javascript">
+function fetch_select(val)
+{
+ $.ajax({
+ type: 'post',
+ url: 'fetch_data.php',
+ data: {
+  get_option:val
+ },
+ success: function (response) {
+  document.getElementById("new_select").innerHTML=response; 
+ }
+ });
+}
+
+</script>  
 	  
   </head>
   <body>
@@ -251,7 +266,28 @@ switch ($favcolor) {
   <option value="3a">Option 3a</option>
   <option value="3b">Option 3b</option>
 </select>
+<hr>
+<div id="select_box">
+ <select onchange="fetch_select(this.value);">
+  <option>Select state</option>
+  <?php
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 
+  $select_compny="SELECT [CompanyID] ,[Company] FROM  [fics].[Company]";
+  $result_select_compny=sqlsrv_query($conn_compny, $select_compny);
+   while($row_compny = sqlsrv_fetch_array($result_select_compny, SQLSRV_FETCH_ASSOC))
+  {
+   echo "<option value='".$row_compny['CompanyID']."' >".$row_compny['Company']."</option>";
+  }
+ ?>
+ </select>
+
+ <select id="new_select">
+ </select>
+	  
+</div> 	  
 <script>
   const firstSelect = document.getElementById('first-select');
   const secondSelect = document.getElementById('second-select');
