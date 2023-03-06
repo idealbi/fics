@@ -129,7 +129,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	 while($row_div = sqlsrv_fetch_array($result_div, SQLSRV_FETCH_ASSOC))
 		    {
 
-	    echo " dropdown2.add(new Option('". $row_div['DivisionID']."', '". $row_div['Division']."'));";
+	    echo " dropdown2.add(new Option('". $row_div['Division']."', '". $row_div['DivisionID']."'));";
 
 		    }?> 
 
