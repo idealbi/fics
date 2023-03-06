@@ -163,9 +163,9 @@ echo " Tests  tabs : ".$array_length."<br>";
   <div class="row g-2">
     <div class="col-6">
       <div class="p-3 border bg-light"><div class="card">
-  <h5 class="card-header">Featured</h5>
+  <h5 class="card-header">Set Up Client Company</h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -196,7 +196,13 @@ echo " Tests  tabs : ".$array_length."<br>";
   <h5 class="card-header">Featured</h5>
   <div class="card-body">
     <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div></div>
