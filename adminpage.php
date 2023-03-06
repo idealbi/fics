@@ -201,7 +201,7 @@ echo " Tests  tabs : ".$array_length."<br>";
       <div class="p-3 border bg-light"><div class="card">
   <h5 class="card-header">Featured</h5>
   <div class="card-body">
-    <p class="card-text">Select Company and  or with Division to view Results</p>
+    <p class="card-text">Select Company (and or with Division) to view Results</p>
     <div class="col-md-4">
     
     <div class="row g-3">
