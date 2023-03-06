@@ -132,7 +132,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 		    {
 
 	    echo " dropdown2.add(new Option('". $row_div['Division']."', '". $row_div['DivisionID']."'));";
-	    echo " dropdown2.add(new Option('". $abc."', '". $abc."'));";
+	  
 
 		    }?> 
 
