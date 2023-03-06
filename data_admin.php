@@ -24,7 +24,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn)
 {
 $p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company])
- VALUES ('". $companyid."','".$company."')";
+ VALUES ('12345','TestCompany')";
 sqlsrv_query( $conn,$p_info_data_insert);
 	echo "saved"
 }
