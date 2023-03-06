@@ -192,7 +192,7 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 	 </div>
  </div>
 	<div class="col">
-		<label for="dropdown2">Select a Division:</label>
+		<label for="new_select">Select a Division:</label>
  <select id="new_select">
  </select>
  </div>
