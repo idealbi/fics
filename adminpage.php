@@ -171,11 +171,11 @@ echo " Tests  tabs : ".$array_length."<br>";
    $num = rand();
   echo" <p><input  name='companyid' value ='".$num."' hidden ></p>";
   ?>
-  <input type="text" class="form-control" id="formCompnay" placeholder="Company">
+  <input type="text" class="form-control" name="formCompnay" placeholder="Company">
 </div>
 <div class="mb-3">
-	<p class="fst-italic">if more than 1 division enter comma separated list eg(Div1,Div2..)</p>
-  <input type="text" class="form-control" id="formDivision" placeholder="Division">
+	<p class="fst-italic">if more than 1 division enter comma separated list eg(Div1,Div2,Div3)</p>
+  <input type="text" class="form-control" name="formDivision" placeholder="Division">
 </div>
 	    <div class="col-12">
     <button type="submit" class="btn btn-primary">Save</button>
@@ -197,13 +197,13 @@ echo " Tests  tabs : ".$array_length."<br>";
  <div class="col-md-6">
 
 	    <form name="frmResults" id="frmResults" action="data_admin.php" method="post">
-   <select id="inputState" class="form-select">
+   <select name="inputCompany" class="form-select">
       <option selected>Choose Company...</option>
       <option>...</option>
     </select>
   </div>
  <div class="col-md-6">
-    <select id="inputState" class="form-select">
+    <select name="inputDivision" class="form-select">
       <option selected>Choose Division...</option>
       <option>...</option>
     </select>
