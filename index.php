@@ -177,35 +177,28 @@ of preference, down to the sentence that least describes you.</p>
 <div class="row">
 	    <div class="col">
 		<label for="dropdown1">Select a Company:</label>
-<select id="dropdown1" class="form-select" onchange="getDivision()">
-	 <?php
+<div id="select_box">
+ <select onchange="fetch_select(this.value);">
+  <option>Select state</option>
+  <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+$conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 
-if ($conn->connect_error)
-{
-echo "Failed to connect to MySQL: " ;
-}
-	$sql = "SELECT [companyid] ,[Company] FROM [fics].[Company] ";
-	$result_p = sqlsrv_query($conn, $sql);
-
- while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
-            {
-	 
-             echo "<option value='".$row_p['companyid']."'>".$row_p['Company']."</option>";
-                
-            }?> 
-  
-</select>
+  $select_compny="SELECT [CompanyID] ,[Company] FROM  [fics].[Company]";
+  $result_select_compny=sqlsrv_query($conn_compny, $select_compny);
+   while($row_compny = sqlsrv_fetch_array($result_select_compny, SQLSRV_FETCH_ASSOC))
+  {
+   echo "<option value='".$row_compny['CompanyID']."' >".$row_compny['Company']."</option>";
+  }
+ ?>
+ </select>
+	 </div>
  </div>
 	<div class="col">
 		<label for="dropdown2">Select a Division:</label>
-<select id="dropdown2" class="form-select">
-  <option value="a">Option a</option>
-  <option value="b">Option b</option>
-  <option value="c">Option c</option>
-</select>
+ <select id="new_select">
+ </select>
  </div>
   </div>
 <br>
