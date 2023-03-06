@@ -126,6 +126,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
   	$abc = "<script>document.write(selectedCompany)</script>" ;
 	  $sql_div = "SELECT distinct  [Division],[DivisionID] FROM [fics].[Division] where CompanyID='325395622'";
 	 $result_div = sqlsrv_query($conn, $sql_div);
+  echo " dropdown2.add(new Option('". $abc."', '". $abc."'));";
 	
 	 while($row_div = sqlsrv_fetch_array($result_div, SQLSRV_FETCH_ASSOC))
 		    {
