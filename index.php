@@ -174,7 +174,7 @@ of preference, down to the sentence that least describes you.</p>
 	    <div class="col">
 		<label for="dropdown1">Select a Company:</label>
 <div id="select_box">
- <select onchange="fetch_select(this.value);">
+ <select class="form-control" onchange="fetch_select(this.value);">
   <option>Select state</option>
   <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
@@ -193,7 +193,8 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
  </div>
 	<div class="col">
 		<label for="new_select">Select a Division:</label>
- <select id="new_select">
+		<br>
+ <select class="form-control" id="new_select">
  </select>
  </div>
   </div>
