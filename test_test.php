@@ -123,13 +123,13 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	?>
   var selectedCompany = dropdown1.value 
 	  <?php
-	  $sql_div = "SELECT distinct  division,divisionid FROM [fics].[Division] where CompanyID=1";
+	  $sql_div = "SELECT distinct  [Division],[DivisionID] FROM [fics].[Division] where CompanyID=1";
 	 $result_div = sqlsrv_query($conn, $sql_div);
 	
 	 while($row_div = sqlsrv_fetch_array($result_div, SQLSRV_FETCH_ASSOC))
 		    {
 
-	    echo " dropdown2.add(new Option('". $row_div['division']."', '". $row_div['division']."'));";
+	    echo " dropdown2.add(new Option('". $row_div['DivisionID']."', '". $row_div['Division']."'));";
 
 		    }?> 
 
@@ -169,7 +169,7 @@ if ($conn->connect_error)
 {
 echo "Failed to connect to MySQL: " ;
 }
-	$sql = "SELECT distinct  division FROM [fics].[Division]";
+	$sql = "SELECT distinct  Division FROM [fics].[Division]";
 	$result_p = sqlsrv_query($conn, $sql);
 $array_ref = array();
  while($row_p = sqlsrv_fetch_array($result_p, SQLSRV_FETCH_ASSOC))
@@ -198,7 +198,7 @@ echo "test : ".$array_ref[0]
 
 ?>
 <?php
-$favcolor = "red";
+$favcolor = "green";
 
 switch ($favcolor) {
   case "red":
