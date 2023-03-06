@@ -24,8 +24,14 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if ($conn)
 {
-$p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company])VALUES ('".$companyid."','".$company."')";
+$p_info_data_insert = "INSERT INTO [fics].[Company] ([CompanyID],[Company],IsActive)VALUES ('".$companyid."','".$company."',1)";
 sqlsrv_query( $conn,$p_info_data_insert);
 	echo "saveeed";
+for ($x = 0; $x <= $Ismulty; $x++) {
+	
+	$p_info_division_insert = "INSERT INTO [fics].[Division] ([CompanyID],[Division])VALUES(CompanyID,Division)VALUES ('".$companyid."','".$array_divs[$x]."')";
+sqlsrv_query( $conn,$p_info_division_insert);
+  echo "saveeed divions";
+}
 }
 ?>
