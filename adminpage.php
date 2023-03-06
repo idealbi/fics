@@ -203,11 +203,15 @@ echo " Tests  tabs : ".$array_length."<br>";
   <div class="card-body">
     <p class="card-text">Select Company and  or with Division to view Results</p>
     <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose Company...</option>
-      <option>...</option>
-    </select>
+    
+    <div class="row g-3">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Company" aria-label="First name">
+  </div>OR
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Division" aria-label="Last name">
+  </div>
+</div>
 	    <br>
   </div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
