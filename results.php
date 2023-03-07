@@ -131,7 +131,7 @@ img_logo {
 {
 		  $company=$_POST['results_company']);
 		  $division: $_POST['results_division']);
-	  echo "<p>Company : ".$company."  :  Division : ".$division ;
+	  echo "<p>Company : ".$company."  :  Division : ".$division."</p> ;
 	  }
 		  ?>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
