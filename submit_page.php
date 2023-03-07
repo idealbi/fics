@@ -29,6 +29,29 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
    $Ismulty = 38;
 for ($i = 1; $i <= $Ismulty; $i++) {
   echo "new test run : ".$i."<br>";
+  if ($i < 18) 
+                                {
+                                     $itemName = "Q".$i;
+                                     $item1= $itemName."_1";
+                                        $item2=$itemName."_2";
+                                        $item3=$itemName."_3";
+                                        $item4=$itemName."_4";
+                                        
+                                        $valueItem1=$_POST[$item1];
+                                        $valueItem2=$_POST[$item2];
+                                        $valueItem3=$_POST[$item3];
+                                        $valueItem4=$_POST[$item4];
+                                }
+              else {
+                  $itemName ="Q".$i;
+                 $item1= "Options".$i;
+            
+                $valueItem1=$_POST[$item1];
+                $valueItem2=0;
+                $valueItem3=0;
+                $valueItem4=0;                
+              }
+    echo "(".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')<br>" ;
 }
  }                 
 
