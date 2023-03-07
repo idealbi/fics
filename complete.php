@@ -128,9 +128,10 @@ button:hover {
     
     <p>Name: <?php echo $_POST["fname"]." ".$_POST["lname"]; ?></p>
     <p>E-mail: <?php echo $_POST["email"]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell Number : <?php echo $_POST["phone"]; ?></p>
+     <p>Company  : <?php echo $user_company_name; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division  : <?php echo $user_division_name; ?></p>
     <p>Reference Number : <?php echo $num; ?></p>
-    <p>Company  : <?php echo $user_company_name; ?></p>
-    <p>Division  : <?php echo $user_division_name; ?></p>
+   
+   
     
     <!-- qnr_data_ref,Question,Red,Blue,Yellow,Green	qnr_data_date -->
    <?php
