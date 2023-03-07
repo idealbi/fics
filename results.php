@@ -131,6 +131,8 @@ img_logo {
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
+	  $len = strlen($includeALL);
+
 	  if ($company=="0000"){
 		  $checkAll= "Select All no filter";
 		} elseif ($company!="0000" && $division !="0000" && $includeALL=="1") {
@@ -139,7 +141,7 @@ img_logo {
 		  $checkAll=  "Select company and  don`t fileter div";
 		}
 	
-	  echo " test : ".$company."   division : ".$division."  : include ALL :".$checkAll ; ?><br>
+	  echo " test : ".$company."   division : ".$division."  : include ALL :".$checkAll."  - len : ".$len ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
