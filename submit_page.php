@@ -2,7 +2,7 @@
 <?php
 
 
-  
+date_default_timezone_set('Africa/Johannesburg');
 $ref =  $_POST["ref"];
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
@@ -27,7 +27,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 {
    echo "new conn<br>";
    $Ismulty = 38;
-for ($i = 1; $i <= $Ismulty; $i++) {
+for ($i = 1; $i < $Ismulty; $i++) {
   echo "new test run : ".$i."<br>";
   if ($i < 18) 
                                 {
@@ -52,6 +52,9 @@ for ($i = 1; $i <= $Ismulty; $i++) {
                 $valueItem4=0;                
               }
     echo "(itemName :".$itemName.",".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')<br>" ;
+  $data_insert = "INSERT INTO [fics].[Qnr_Data] (qnr_data_ref,Question,Red,Blue,Yellow,Green,qnr_data_date)
+VALUES (".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')" ;
+sqlsrv_query( $conn,$data_insert);
 }
  }                 
 
