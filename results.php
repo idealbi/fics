@@ -126,6 +126,14 @@ img_logo {
 <br>
 <div class="card">
   <div class="card-body">
+	  <?php
+	  if(isset($_POST['results_division']))
+{
+		  $company=$_POST['results_company']);
+		  $division: $_POST['results_division']);
+	  echo "<p>Company : ".$company."  :  Division : ".$division ;
+	  }
+		  ?>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
