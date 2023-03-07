@@ -148,7 +148,7 @@ function fetch_select(val)
 </div>
 <div class="container">
    <form id="regForm" action="complete.php" method="post">
-  <h1>Questionnaire</h1>
+  <h1>Start Questionnaire</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="tab"><p class="fw-bold">Instructions :</p>
     <p>
@@ -175,7 +175,7 @@ of preference, down to the sentence that least describes you.</p>
 		<label for="dropdown1">Select a Company:</label>
 <div id="select_box">
  <select class="form-control" onchange="fetch_select(this.value);">
-  <option>Select state</option>
+  <option Value="0000">Select Company</option>
   <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
@@ -195,6 +195,7 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 		<label for="new_select">Select a Division:</label>
 		<br>
  <select class="form-control" id="new_select">
+	  <option Value="0000">None</option>
  </select>
  </div>
   </div>
