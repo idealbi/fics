@@ -131,12 +131,12 @@ img_logo {
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
-	  if ($includeALL == "1") {
-		  $checkAll= "Have a good morning!";
-		} elseif ($includeALL == "") {
-		  $checkAll= "Have a nothing!";
-		} else {
-		  $checkAll= "Have a good not working!";
+	  if ($company=="0000"){
+		  $checkAll= "Select All no filter";
+		} elseif ($company!="0000" && $division !="0000" && $includeALL=="1") {
+		  $checkAll= "Select company and fileter div";
+		} elseif ($company!="0000" && $division !="0000" && $includeALL==" "){
+		  $checkAll=  "Select company and  don`t fileter div";
 		}
 	
 	  echo " test : ".$company."   division : ".$division."  : include ALL :".$checkAll ; ?><br>
