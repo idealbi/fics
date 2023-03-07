@@ -131,9 +131,15 @@ img_logo {
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
-	  
+	  if ($includeALL == "1") {
+		  $checkAll= "Have a good morning!";
+		} elseif ($includeALL == "") {
+		  $checkAll= "Have a nothing!";
+		} else {
+		  $checkAll= "Have a good not working!";
+		}
 	
-	  echo " test : ".$company."   division : ".$division."  : include ALL :".$includeALL ; ?><br>
+	  echo " test : ".$company."   division : ".$division."  : include ALL :".$checkAll ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
