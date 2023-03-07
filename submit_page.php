@@ -8,22 +8,24 @@ $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
 $phone =  $_POST["phone"];
-
+$user_division =  $_POST["user_division"];
+$user_company =  $_POST["user_company"];
+$date = date('Y-m-d H:i:s');
 echo "Tessst : ".$ref,",-",$fname,",",$lname,"<br>";
 echo $email .", ".$phone."<br>".$num;
 
-$conn = mysqli_connect("localhost","questionnairekar_app","questionnairekar_app","questionnairekar_fics");
-
- if (mysqli_connect_errno())
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+ if ($conn)
 {
-echo "Connection Failed; " . mysqli_connect_error();
+   $p_info_data_insert = "INSERT INTO [fics].[Persons] ([qnr_data_ref],[FirstName],[LastName],[email],[contactnumber],[CompanyID] ,[DivisionID])
+  VALUES ('". $ref."','".$fname."','".$lname."','".$email."','".$phone."','".$user_company."','".$user_division."')";
+  sqlsrv_query( $conn,$p_info_data_insert);
 }
-else
+ if ($conn)
 {
-    echo "<br> Connectned ";
-    $p_info_data_insert = "INSERT INTO qnr_person_info(qnr_data_ref,first_name,	last_name,email,contactnumber)
- VALUES ('". $ref."','".$fname."','".$lname."','".$email."','".$phone."')";
-mysqli_query( $conn,$p_info_data_insert);
+    
 
 
 
@@ -53,9 +55,9 @@ while($i < 38)
                 $valueItem3=0;
                 $valueItem4=0;                
               }
-              $data_insert = "INSERT INTO qnr_data (qnr_data_ref,Question,Red,Blue,Yellow,Green)
-VALUES (".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4.")" ;
-mysqli_query( $conn,$data_insert);
+              $data_insert = "INSERT INTO [fics].[Qnr_Data] (qnr_data_ref,Question,Red,Blue,Yellow,Green,qnr_data_date)
+VALUES (".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')" ;
+sqlsrv_query( $conn,$data_insert);
               
               
                         	$i++;
