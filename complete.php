@@ -113,14 +113,24 @@ button:hover {
    $num = rand();
     $user_division=$_POST['user_division'];
     $user_company=$_POST['user_company'];
+    $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+    $conn_division= sqlsrv_connect($serverName, $connectionInfo);
+    $find_sql_division = "select Company, Division from fics.Company c join [fics].[Division] d on c.CompanyID=d.CompanyID where c.CompanyID='".$user_company."' and DivisionID = ".$user_division;
+    $result_select_division=sqlsrv_query($conn_division, $find_sql_division);
+   while($row_division= sqlsrv_fetch_array($result_select_division, SQLSRV_FETCH_ASSOC))
+     {
+      $user_company_name= $row_division['Company'];
+      $user_division_name= $row_division['Division'];
+     }
   ?>
 
     
     <p>Name: <?php echo $_POST["fname"]." ".$_POST["lname"]; ?></p>
     <p>E-mail: <?php echo $_POST["email"]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell Number : <?php echo $_POST["phone"]; ?></p>
     <p>Reference Number : <?php echo $num; ?></p>
-    <p>Company Number : <?php echo $user_company; ?></p>
-    <p>Division Number : <?php echo $user_division; ?></p>
+    <p>Company  : <?php echo $user_company_name; ?></p>
+    <p>Division  : <?php echo $user_division_name; ?></p>
     
     <!-- qnr_data_ref,Question,Red,Blue,Yellow,Green	qnr_data_date -->
    <?php
