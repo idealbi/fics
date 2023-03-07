@@ -135,7 +135,7 @@ img_logo {
 		  $checkAll= "Select All no filter";
 		} elseif ($company!="0000" && $division !="0000" && $includeALL=="1") {
 		  $checkAll= "Select company and fileter div";
-		} elseif ($company!="0000" && $division !="0000" && $includeALL==" "){
+		} elseif ($company!="0000" && $division !="0000" && $includeALL==""){
 		  $checkAll=  "Select company and  don`t fileter div";
 		}
 	
