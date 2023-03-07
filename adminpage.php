@@ -212,9 +212,9 @@ echo " Tests  tabs : ".$array_length."<br>";
     <div class="row g-3">
  <div class="col-md-12">
 
-	    <form name="frmResults" id="frmResults" action="data_admin.php" method="post">
+	    <form name="frmResults" id="frmResults" action="results.php" method="post">
 <div id="select_box">
- <select class="form-control" onchange="fetch_select(this.value);">
+ <select class="form-control" name="results_company" onchange="fetch_select(this.value);">
   <option Value="0000">Select Company</option>
   <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
@@ -232,8 +232,8 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 	 </div>
   </div>
  <div class="col-md-12">
-    <select class="form-control" id="new_select">
-	  <option Value="0000">None</option>
+    <select  name="results_division" class="form-control" id="new_select">
+	  <option Value="0000">Nonee</option>
  </select>
   </div>
 </div>
