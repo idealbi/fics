@@ -25,10 +25,10 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
  if ($conn)
 {
-   echo "new conn<br>";
+  
    $Ismulty = 38;
 for ($i = 1; $i < $Ismulty; $i++) {
-  echo "new test run : ".$i."<br>";
+  
   if ($i < 18) 
                                 {
                                      $itemName = "Q".$i;
