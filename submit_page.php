@@ -26,6 +26,11 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
  if ($conn)
 {
    echo "new conn<br>";
+   $i = 1;
+while($i < 38)
+          {
+  echo "new conn".$i."<br>";
+      }
  }                 
 
 
