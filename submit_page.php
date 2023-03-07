@@ -55,6 +55,8 @@ while($i < 38)
                 $valueItem3=0;
                 $valueItem4=0;                
               }
+  
+  echo "(".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')<br>" ;
               $data_insert = "INSERT INTO [fics].[Qnr_Data] (qnr_data_ref,Question,Red,Blue,Yellow,Green,qnr_data_date)
 VALUES (".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')" ;
 sqlsrv_query( $conn,$data_insert);
