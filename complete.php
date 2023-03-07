@@ -123,7 +123,107 @@ button:hover {
     <p>Division Number : <?php echo $user_division; ?></p>
     
     <!-- qnr_data_ref,Question,Red,Blue,Yellow,Green	qnr_data_date -->
+   <?php
+    
+    
+    
+    
+    $ref = $num;
+
+
+    
+    $a5_1 = $_POST["sel5_1"];
+    $a5_2=$_POST["sel5_2"];
+    $a5_3=$_POST["sel5_3"];
+    $a5_4=$_POST["sel5_4"];
+?>
+<form name="data_submit" action="submit_page.php" method ="POST">
+<input type="text"  name="fname" value="<?php echo $_POST["fname"]?> "hidden>
+<input type="text"  name="lname" value="<?php echo $_POST["lname"]?> "hidden>
+<input type="text"  name="email" value="<?php echo $_POST["email"]?> "hidden>
+<input type="text"  name="ref" value="<?php echo $ref?> "hidden>
+<input type="text"  name="phone" value="<?php echo $_POST["phone"]?> "hidden>
+<input type="text"  name="user_company" value="<?php echo $user_company;?> "hidden>
+<input type="text"  name="user_division" value="<?php echo $user_division;?> "hidden>
+<table  >
+    
+    
+    
+<?php
+
+    $i = 1;
+            
+                    while($i < 38)
+                    {
+                        
+                        $itemNum = $i ;
+                        
+                          if ($i < 18) 
+                                {
+                                    if ($i ==5){
+                                         $itemName = "Q".$i;
+                                        $item1=$a5_1;
+                                        $item2=$a5_2;
+                                        $item3=$a5_3;
+                                        $item4= $a5_4;
+                                        $item1_1= "Q5_1";
+                                        $item2_1="Q5_2";
+                                        $item3_1="Q5_3";
+                                        $item4_1="Q5_4";                                          
+                                    }
+                                    else {
+                                        $itemName = "Q".$i;
+                                        $item1_1= $itemName."_1";
+                                        $item2_1=$itemName."_2";
+                                        $item3_1=$itemName."_3";
+                                        $item4_1=$itemName."_4";
+                                     
+                                        $item1=$_POST[$item1_1];
+                                        $item2=$_POST[$item2_1];
+                                        $item3=$_POST[$item3_1];
+                                       $item4= $_POST[$item4_1];                                       
+                                    }
+                                    
+
+echo "<tr>
+     <td><input type= 'text'  name= '".$itemName ."' value= '".$itemName ."'> </td>
+     <td><input type= 'text'  name= '".$item1_1."' value= '".$item1."'> </td>
+     <td><input type= 'text'  name= '".$item2_1."' value= '".$item2."'> </td>
+     <td><input type= 'text'  name= '".$item3_1."' value= '".$item3."' > </td>
+     <td><input type= 'text'  name= '".$item4_1."' value= '".$item4."'></td>
+ </tr> "
+ ;}
+
+                                
+            
+                        else 
+                                {
+                                    $itemName = "Options".$i;
+                                     $Option= $_POST[$itemName];
+                                     $no_data = 0;
+                     
+echo "<tr>
+     <td><input type= 'text'  name='Q".$itemNum."' value='".$itemNum."'></td>
+     <td><input type= 'text'  name='".$itemName ."' value='". $Option."'></td>
+     <td><input type= 'text'  name='non' value='". $i ."'></td>
+     <td><input type= 'text'  name='non' value='". $Option ."'></td>
+     <td><input type= 'text'  name='non' value='".$no_data."'></td>
+ </tr>";
+
+                                };
+                    
+                    	$i++;
+                  
+                    	
+                    }
    
+   
+    ?>
+    
+ </table>
+     <input type="submit" value="Submit" onclick="submit_form();" >
+</form>   
+ 
   </div>
   
 <script>
