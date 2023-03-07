@@ -31,13 +31,13 @@ for ($i = 1; $i <= $Ismulty; $i++) {
   echo "new test run : ".$i."<br>";
   if ($i < 18) 
                                 {
-                                     $itemName = "Q".$i;
+                                     $itemName = "Q1";
                                      $item1= $itemName."_1";
                                         $item2=$itemName."_2";
                                         $item3=$itemName."_3";
                                         $item4=$itemName."_4";
                                         
-                                        $valueItem1=$_POST[$item1];
+                                        $valueItem1=$_POST['Q1_1'];
                                         $valueItem2=$_POST[$item2];
                                         $valueItem3=$_POST[$item3];
                                         $valueItem4=$_POST[$item4];
