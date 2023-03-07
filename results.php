@@ -133,15 +133,9 @@ img_logo {
 	  $includeALL =  $_POST["includeALL"];
 	  $len = strval(strlen($includeALL));
 
-	  if ($company=="0000"){
-		  $checkAll= "Select All no filter";
-		} elseif ($company!="0000" && $division !="0000" && $len=="1") {
-		  $checkAll= "Select company and fileter div";
-		} elseif ($company!="0000" && $division !="0000" && $len=="0"){
-		  $checkAll=  "Select company and  don`t fileter div";
-		}
+	  
 	
-	  echo " test : ".$company."   division : ".$division."  : include ALL :".$checkAll."  - len : ".$len ; ?><br>
+	  echo " Company : ".$company." (10) <br>   Division : ".$division ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
@@ -156,8 +150,16 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
  
 if ($conn)
 {
+	if ($company=="0000"){
+		  $sql = "SELECT * FROM fics.Results";
+		} elseif ($company!="0000" && $division !="0000" && $len=="1") {
+		  
+			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
+		} elseif ($company!="0000" && $division !="0000" && $len=="0"){
+		  
+		$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'";
+		}
 	
-	$sql = "SELECT * FROM fics.Results";
 	$result = sqlsrv_query($conn, $sql);
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
