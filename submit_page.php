@@ -25,53 +25,8 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
  if ($conn)
 {
-    
+   echo "new conn<br>";
+ }                 
 
-
-
-
-$i = 1;
-while($i < 38)
-          {
-            echo "Tessst : ".$ref,",-",$fname,",",$lname,"<br>";
-              if ($i < 18) 
-                                {
-                                     $itemName = "Q".$i;
-                                     $item1= $itemName."_1";
-                                        $item2=$itemName."_2";
-                                        $item3=$itemName."_3";
-                                        $item4=$itemName."_4";
-                                        
-                                        $valueItem1=$_POST[$item1];
-                                        $valueItem2=$_POST[$item2];
-                                        $valueItem3=$_POST[$item3];
-                                        $valueItem4=$_POST[$item4];
-                                }
-              else {
-                  $itemName ="Q".$i;
-                 $item1= "Options".$i;
-            
-                $valueItem1=$_POST[$item1];
-                $valueItem2=0;
-                $valueItem3=0;
-                $valueItem4=0;                
-              }
-  
-  echo "(".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')<br>" ;
-              $data_insert = "INSERT INTO [fics].[Qnr_Data] (qnr_data_ref,Question,Red,Blue,Yellow,Green,qnr_data_date)
-VALUES (".$ref.",".$i.",".$valueItem1.",".$valueItem2.",".$valueItem3.",".$valueItem4."','".$date."')" ;
-sqlsrv_query( $conn,$data_insert);
-              
-              
-                        	$i++;
-                  
-                    	
-                    }
-                    
-                    
-
-echo "data saved <br>";
-header("Location: https://www.google.com");
-die();
 };
 ?>
