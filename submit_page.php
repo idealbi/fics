@@ -33,6 +33,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 $i = 1;
 while($i < 38)
           {
+            echo "Tessst : ".$ref,",-",$fname,",",$lname,"<br>";
               if ($i < 18) 
                                 {
                                      $itemName = "Q".$i;
