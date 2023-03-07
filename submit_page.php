@@ -28,5 +28,5 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
    echo "new conn<br>";
  }                 
 
-};
+
 ?>
