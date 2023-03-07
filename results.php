@@ -132,10 +132,7 @@ img_logo {
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
 	  
-	  if($company=="0000" && $division=="0000"){
-		  echo "All";}
-	  elif  ($company!= "0000" || $division != "0000")
-	  { echo "not All";}
+	
 	  echo " test : ".$company."   division : ".$division."  : include ALL :".$includeALL ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
