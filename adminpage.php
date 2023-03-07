@@ -232,6 +232,12 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 	 </div>
   </div>
  <div class="col-md-12">
+	 <div class="form-check">
+  <input class="form-check-input" type="checkbox"  name ="includeALL" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Include All Divisions
+  </label>
+</div>
     <select  name="results_division" class="form-control" id="new_select">
 	  <option Value="0000">Nonee</option>
  </select>
