@@ -127,8 +127,9 @@ img_logo {
 <div class="card">
   <div class="card-body">
 	<?php
-	  $company =  $_POST["results_division"];
-	  echo " test : ".$company; ?><br>
+	  $company =  $_POST["results_company"];
+	  $division =  $_POST["results_division"];
+	  echo " test : ".$company."   division : ".$division ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
