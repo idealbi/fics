@@ -127,9 +127,16 @@ img_logo {
 <div class="card">
   <div class="card-body">
 	<?php
+	  
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
-	  echo " test : ".$company."   division : ".$division ; ?><br>
+	  $includeALL =  $_POST["includeALL"];
+	  
+	  if($company=="0000" && $division=="0000"){
+		  echo "All";}
+	  elif  ($company!= "0000" || $division != "0000")
+	  { echo "not All";}
+	  echo " test : ".$company."   division : ".$division."  : include ALL :".$includeALL ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
