@@ -130,8 +130,11 @@ button:hover {
     <p>E-mail: <?php echo $_POST["email"]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell Number : <?php echo $_POST["phone"]; ?></p>
      <p>Company  : <?php echo $user_company_name; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division  : <?php echo $user_division_name; ?></p>
     <p>Reference Number : <?php echo $num; ?></p>
-   
-   
+   <?php
+    echo "<br>";
+$date = date('Y-m-d H:i:s');
+echo " Date : ". $date;
+   ?>
     
     <!-- qnr_data_ref,Question,Red,Blue,Yellow,Green	qnr_data_date -->
    <?php
