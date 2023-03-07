@@ -126,7 +126,7 @@ img_logo {
 <br>
 <div class="card">
   <div class="card-body">
-	
+	<?php echo " test"; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
