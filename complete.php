@@ -159,7 +159,7 @@ echo " Date : ". $date;
 <input type="text"  name="phone" value="<?php echo $_POST["phone"]?> "hidden>
 <input type="text"  name="user_company" value="<?php echo $user_company;?> "hidden>
 <input type="text"  name="user_division" value="<?php echo $user_division;?> "hidden>
-<table  >
+<table  hidden>
     
     
     
