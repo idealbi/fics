@@ -233,7 +233,7 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
   </div>
  <div class="col-md-12">
 	 <div class="form-check">
-  <input class="form-check-input" type="checkbox"  name ="includeALL" value="" id="flexCheckDefault">
+  <input class="form-check-input" type="checkbox"  name ="includeALL" value="1" id="flexCheckDefault">
   <label class="form-check-label" for="flexCheckDefault">
     Include All Divisions
   </label>
