@@ -200,11 +200,11 @@ echo " Date : ". $date;
                                     
 
 echo "<tr>
-     <td><input type= 'text'  name= '".$itemName ."' value= '".$itemName ."'> </td>
-     <td><input type= 'text'  name= '".$item1_1."' value= '".$item1."'> </td>
-     <td><input type= 'text'  name= '".$item2_1."' value= '".$item2."'> </td>
-     <td><input type= 'text'  name= '".$item3_1."' value= '".$item3."' > </td>
-     <td><input type= 'text'  name= '".$item4_1."' value= '".$item4."'></td>
+     <td><input type= 'text'  name= '".$itemName ."' value= '".$itemName ."'>".$itemName ." </td>
+     <td><input type= 'text'  name= '".$item1_1."' value= '".$item1."'> ".$item1_1."</td>
+     <td><input type= 'text'  name= '".$item2_1."' value= '".$item2."'> ".$item2_1."</td>
+     <td><input type= 'text'  name= '".$item3_1."' value= '".$item3."' >".$item3_1." </td>
+     <td><input type= 'text'  name= '".$item4_1."' value= '".$item4."'>".$item4_1."</td>
  </tr> "
  ;}
 
