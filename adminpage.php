@@ -110,6 +110,22 @@ img_logo {
   border: 1px solid #aaaaaa;
 }
 </style>
+<script type="text/javascript">
+function fetch_select(val)
+{
+ $.ajax({
+ type: 'post',
+ url: 'fetch_data_users.php',
+ data: {
+  get_option:val
+ },
+ success: function (response) {
+  document.getElementById("new_select").innerHTML=response; 
+ }
+ });
+}
+
+</script> 
   </head>
   <body>
       <nav class="navbar navbar-light " style="background-color: #ffffff;">
@@ -197,16 +213,28 @@ echo " Tests  tabs : ".$array_length."<br>";
  <div class="col-md-6">
 
 	    <form name="frmResults" id="frmResults" action="data_admin.php" method="post">
-   <select name="inputCompany" class="form-select">
-      <option selected>Choose Company...</option>
-      <option>...</option>
-    </select>
+<div id="select_box">
+ <select class="form-control" onchange="fetch_select(this.value);">
+  <option Value="0000">Select Company</option>
+  <?php
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn_compny = sqlsrv_connect($serverName, $connectionInfo);
+
+  $select_compny="SELECT [CompanyID] ,[Company] FROM  [fics].[Company]";
+  $result_select_compny=sqlsrv_query($conn_compny, $select_compny);
+   while($row_compny = sqlsrv_fetch_array($result_select_compny, SQLSRV_FETCH_ASSOC))
+  {
+   echo "<option value='".$row_compny['CompanyID']."' >".$row_compny['Company']."</option>";
+  }
+ ?>
+ </select>
+	 </div>
   </div>
  <div class="col-md-6">
-    <select name="inputDivision" class="form-select">
-      <option selected>Choose Division...</option>
-      <option>...</option>
-    </select>
+    <select class="form-control" id="new_select">
+	  <option Value="0000">None</option>
+ </select>
   </div>
 </div>
 	    <br>
