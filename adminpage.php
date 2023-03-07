@@ -210,7 +210,7 @@ echo " Tests  tabs : ".$array_length."<br>";
     <div class="col-md-4">
     
     <div class="row g-3">
- <div class="col-md-6">
+ <div class="col-md-12">
 
 	    <form name="frmResults" id="frmResults" action="data_admin.php" method="post">
 <div id="select_box">
@@ -231,7 +231,7 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
  </select>
 	 </div>
   </div>
- <div class="col-md-6">
+ <div class="col-md-12">
     <select class="form-control" id="new_select">
 	  <option Value="0000">None</option>
  </select>
