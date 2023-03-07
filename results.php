@@ -129,8 +129,8 @@ img_logo {
 	  <?php
 	  if(isset($_POST['results_division']))
 {
-		  $company=$_POST['results_company']);
-		  $division: $_POST['results_division']);
+		  $company   =  $_POST['results_company'];
+		  $division  =  $_POST['results_division'];
 	  echo "<p>Company : ".$company."  :  Division : ".$division."</p> ;
 	  }
 		  ?>
