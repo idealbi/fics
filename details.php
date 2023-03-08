@@ -130,7 +130,7 @@ img_logo {
     <div class="col-sm-3"> 
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
-          <font face = "Verdana" size = "2">test-img path
+          <font face = "Verdana" size = "2">
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
@@ -322,14 +322,14 @@ $result = sqlsrv_query($conn, $sql_p);
 
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    <?php echo $Behaviouralfile;?>
+    
 <img src=" <?php echo $Behaviouralfile;?>" alt="" width="70%" height="400">
 
 
 
 <br> 
 <a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
-<?php echo $LanguageDownFileName;?>
+
 <img src="<?php echo $Languagefile;?>" alt="" width="70%" height="400">
 </div>
 
