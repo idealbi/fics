@@ -326,7 +326,7 @@ $result = sqlsrv_query($conn, $sql_p);
 <img src=" <?php echo $Behaviouralfile;?>" alt="" width="70%" height="400">
 
 
-
+<hr>
 <br> 
 <a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
 
