@@ -134,7 +134,13 @@ list($ref_id, $company,$division) = explode('-', $link_id);
 $back_link_id= $company."-".$division;
 echo "Test : ".$ref_id."<br>back_link_id : ".$back_link_id ;
 ?>
-    <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
+<form   action='results.php' method ='post' class='row gy-2 gx-3 align-items-center'>
+ 							 <div class='col-auto'>
+ 							  <input type=text' class='form-control' id='autoSizingInputGroup' name ='ref' value='".$back_link_id."'hidden  >
+    							  <button type='submit' class='btn btn-success btn-sm'>Back</button>
+  							</div> 
+ 						 </form>
+    
    
           <font face = "Verdana" size = "2">
       <?php
@@ -168,7 +174,7 @@ $BehaviouralDownFileName=$Name."_".$ref_id."_".$QnsDate."_".$Behavioural."_Behav
       <ul class="list-group">
   <li class="list-group-item"><b>Full Name : <?php echo $Name; ?></b></li>
   <li class="list-group-item">Cellphone : <?php echo $Cellnum; ?></li>
-  <li class="list-group-item">Ref :<?php echo $_POST["ref"]; ?></li>
+  <li class="list-group-item">Ref :<?php echo $ref_id; ?></li>
 
 </ul>
 </font>
