@@ -128,6 +128,7 @@ img_logo {
   <div class="card-body">
 	<?php
 	  $Isback_link= $_POST["ref"];
+	  $len_Isback = strlen($Isback_link);
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
@@ -135,7 +136,7 @@ img_logo {
 
 	  
 	
-	  echo " Company : ".$company." (10) <br>   Division : ".$division."<br>".$Isback_link ; ?><br>
+	  echo " Company : ".$company." (10) <br>   Division : ".$division."Isback_link : <br>".$Isback_link."<br> Length Is Back : ".$len_Isback ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
