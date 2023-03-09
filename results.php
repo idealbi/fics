@@ -164,6 +164,7 @@ if ($conn)
 	
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
+			$link=$row['qnr_data_ref']."-".$company."-".$division
 	echo " 
 	<tr> <td>
 		<div class='card'>
@@ -175,7 +176,7 @@ if ($conn)
                     				<div class='col'>
                        				 <form   action='details.php' method ='post' class='row gy-2 gx-3 align-items-center'>
  							 <div class='col-auto'>
- 							  <input type=text' class='form-control' id='autoSizingInputGroup' name ='ref' value='".$row['qnr_data_ref']."'hidden  >
+ 							  <input type=text' class='form-control' id='autoSizingInputGroup' name ='ref' value='".$link."'hidden  >
     							  <button type='submit' class='btn btn-success btn-sm'>View Details</button>
   							</div> 
  						 </form>
