@@ -135,7 +135,9 @@ img_logo {
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
+
 $ref_id =  $_POST["ref"];
+echo "Test : ".$ref_id ;
 if ($conn->connect_error)
 {
 echo "Failed to connect to MySQL: " ;
