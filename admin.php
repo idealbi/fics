@@ -102,7 +102,7 @@
                   $_SESSION['timeout'] = time();
                   $_SESSION['username'] = 'tutorialspoint';
                   
-                  header("Location: results.php");
+                  header("Location: adminpage.php");
                }else {
                   $msg = 'Wrong username or password';
                }
