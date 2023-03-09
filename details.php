@@ -133,15 +133,15 @@ img_logo {
 list($ref_id, $company,$division) = explode('-', $link_id);
 $back_link_id= $company."-".$division;
 echo "Test : ".$ref_id."<br>back_link_id : ".$back_link_id ;
-?>
-<form   action='results.php' method ='post' class='row gy-2 gx-3 align-items-center'>
+
+echo "<form   action='results.php' method ='post' class='row gy-2 gx-3 align-items-center'>
  							 <div class='col-auto'>
  							  <input type=text' class='form-control' id='autoSizingInputGroup' name ='ref' value='".$back_link_id."'hidden  >
     							  <button type='submit' class='btn btn-success btn-sm'>Back</button>
   							</div> 
- 						 </form>
+ 						 </form>";
     
-   
+   ?>
           <font face = "Verdana" size = "2">
       <?php
 $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
