@@ -127,7 +127,7 @@ img_logo {
 <div class="card">
   <div class="card-body">
 	<?php
-	  
+	  $Isback_link= $_POST["ref"];
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
@@ -135,7 +135,7 @@ img_logo {
 
 	  
 	
-	  echo " Company : ".$company." (10) <br>   Division : ".$division ; ?><br>
+	  echo " Company : ".$company." (10) <br>   Division : ".$division."br>".$Isback_link ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
