@@ -128,6 +128,12 @@ img_logo {
    <div class="card ">
       <div class="row">
     <div class="col-sm-3"> 
+	<?php 
+	$link_id =  $_POST["ref"];
+list($ref_id, $company,$division) = explode('-', $link_id);
+$back_link_id= $company."-".$division;
+echo "Test : ".$ref_id."<br>back_link_id : ".$back_link_id ;
+?>
     <a class="btn btn-success btn-sm" href="results.php" role="button">Back</a>
    
           <font face = "Verdana" size = "2">
@@ -136,8 +142,7 @@ $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database"
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-$ref_id =  $_POST["ref"];
-echo "Test : ".$ref_id ;
+
 if ($conn->connect_error)
 {
 echo "Failed to connect to MySQL: " ;
