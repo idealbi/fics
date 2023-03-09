@@ -132,7 +132,7 @@ img_logo {
 	$link_id =  $_POST["ref"];
 list($ref_id, $company,$division) = explode('-', $link_id);
 $back_link_id= $company."-".$division;
-echo "Test : ".$ref_id."<br>back_link_id : ".$back_link_id ;
+
 
 echo "<form   action='results.php' method ='post' class='row gy-2 gx-3 align-items-center'>
  							 <div class='col-auto'>
