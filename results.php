@@ -164,7 +164,7 @@ if ($conn)
 	
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
-			$link=$row['qnr_data_ref']."-".$company."-".$division
+			$link=$row['qnr_data_ref']."-".$company."-".$division;
 	echo " 
 	<tr> <td>
 		<div class='card'>
