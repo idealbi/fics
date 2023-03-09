@@ -128,7 +128,7 @@ img_logo {
   <div class="card-body">
 	<?php
 	  $Isback_link= $_POST["ref"];
-	  $len_Isback = strlen($Isback_link);
+	  $len_Isback = strval(strlen($Isback_link));
 	  $company =  $_POST["results_company"];
 	  $division =  $_POST["results_division"];
 	  $includeALL =  $_POST["includeALL"];
@@ -136,7 +136,7 @@ img_logo {
 
 	  
 	
-	  echo " Company : ".$company." (10) <br>   Division : ".$division."Isback_link : <br>".$Isback_link."<br> Length Is Back : ".$len_Isback ; ?><br>
+	  echo " Company : ".$company." (10) <br>   Division : ".$division."Isback_link : ".$Isback_link."<br> Length Is Back : ".$len_Isback ; ?><br>
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
@@ -151,14 +151,20 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
  
 if ($conn)
 {
-	if ($company=="0000"){
-		  $sql = "SELECT * FROM fics.Results";
-		} elseif ($company!="0000" && $division !="0000" && $len=="1") {
-		  
-			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
-		} elseif ($company!="0000" && $division !="0000" && $len=="0"){
-		  
-		$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'";
+	if($len_Isback=="1"){
+		$sql = "SELECT * FROM fics.Results";
+	}
+	else {
+			list( $company,$division) = explode('-', $Isback_link);
+			if ($company=="0000"){
+			  $sql = "SELECT * FROM fics.Results";
+			} elseif ($company!="0000" && $division !="0000" && $len=="1") {
+			  
+				$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
+			} elseif ($company!="0000" && $division !="0000" && $len=="0"){
+			  
+			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'";
+			}
 		}
 	
 	$result = sqlsrv_query($conn, $sql);
