@@ -136,7 +136,7 @@ img_logo {
 
 	  
 	
-	  echo " Company : ".$company." (10) <br>   Division : ".$division."Isback_link : ".$Isback_link."<br> Length Is Back : ".$len_Isback ; ?><br>
+	 
 <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
  <table class="table table-bordered table-striped">
