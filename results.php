@@ -154,6 +154,18 @@ if ($conn)
 	if($len_Isback=="1"){
 		$sql = "SELECT * FROM fics.Results";
 	}
+	elseif($len_Isback=="0"){
+		if ($company=="0000"){
+			  $sql = "SELECT * FROM fics.Results";
+			} elseif ($company!="0000" && $division !="0000" && $len=="1") {
+			  
+				$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
+			} elseif ($company!="0000" && $division !="0000" && $len=="0"){
+			  
+			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'";
+			}
+	}
+	
 	else {
 			list( $company,$division) = explode('-', $Isback_link);
 			if ($company=="0000"){
