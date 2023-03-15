@@ -154,29 +154,9 @@ if ($conn)
 	if($len_Isback=="1"){
 		$sql = "SELECT * FROM fics.Results";
 	}
-	elseif($len_Isback=="0"){
-		if ($company=="0000"){
-			  $sql = "SELECT * FROM fics.Results";
-			} elseif ($company!="0000" && $division !="0000" && $len=="1") {
-			  
-				$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
-			} elseif ($company!="0000" && $division !="0000" && $len=="0"){
-			  
-			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'";
-			}
-	}
-	
 	else {
-			list( $company,$division) = explode('-', $Isback_link);
-			if ($company=="0000"){
-			  $sql = "SELECT * FROM fics.Results";
-			} elseif ($company!="0000" && $division !="0000" && $len=="1") {
-			  
 				$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
-			} elseif ($company!="0000" && $division !="0000" && $len=="0"){
-			  
-			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."' and DivisionID = '".$division."'";
-			}
+			
 		}
 	
 	$result = sqlsrv_query($conn, $sql);
@@ -189,7 +169,7 @@ if ($conn)
 		<div class='card'>
 			<div class='card-body'>
 				<p class='fw-bold'>" . $row['FullName']. "</p>
-				<font style='font-size:12px;color:gray'>Company :".$row['CompanyID']." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division :".$row['DivisionID']." </font>
+				<font style='font-size:12px;color:gray'>Company :".$row['Company']." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division :".$row['Division']." </font>
 				<div class='row'>
 					<div class='col'>Behavioural : <b>" .$row['Behavioural']."</b> - (".$row['BehaviouralValue'].")</div>
 					<div class='col'> Language : <b>".$row['Language']."</b> - (".$row['LanguageValue'].")</div>
