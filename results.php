@@ -185,7 +185,7 @@ if ($conn)
 		{
 			$link=$row['qnr_data_ref']."-".$company."-".$division;
 	echo " 
-	<tr> <td>
+	<tr> <td>sql ".$ql."
 		<div class='card'>
 			<div class='card-body'>
 				<p class='fw-bold'>" . $row['FullName']. "</p>
