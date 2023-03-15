@@ -189,6 +189,7 @@ if ($conn)
 		<div class='card'>
 			<div class='card-body'>
 				<p class='fw-bold'>" . $row['FullName']. "</p>
+				<font style='font-size:12px;color:gray'>Company :".$company." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division :".$division." </font>
 				<div class='row'>
 					<div class='col'>Behavioural : <b>" .$row['Behavioural']."</b> - (".$row['BehaviouralValue'].")</div>
 					<div class='col'> Language : <b>".$row['Language']."</b> - (".$row['LanguageValue'].")</div>
