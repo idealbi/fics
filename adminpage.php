@@ -221,7 +221,7 @@ $connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database"
 $serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
 $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
 
-  $select_compny="SELECT [CompanyID] ,[Company] FROM  [fics].[Company]";
+  $select_compny="SELECT [CompanyID] ,[Company] FROM  [fics].[Company] where IsActive=1";
   $result_select_compny=sqlsrv_query($conn_compny, $select_compny);
    while($row_compny = sqlsrv_fetch_array($result_select_compny, SQLSRV_FETCH_ASSOC))
   {
@@ -268,7 +268,7 @@ $conn_compny = sqlsrv_connect($serverName, $connectionInfo);
   </div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding4</div>
+      <div class="p-3 border bg-light"></div>
     </div>
  
   </div>
