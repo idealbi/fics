@@ -175,7 +175,7 @@ if ($conn)
 				$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
 			} elseif ($company!="0000" && $division !="0000" && $len=="0"){
 			  
-			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'";
+			$sql = "SELECT * FROM fics.Results where CompanyID='".$company."' and DivisionID = '".$division."'";
 			}
 		}
 	
