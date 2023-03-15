@@ -169,7 +169,7 @@ if ($conn)
 		<div class='card'>
 			<div class='card-body'>
 				<p class='fw-bold'>" . $row['FullName']. "</p>
-				<font style='font-size:12px;color:gray'>Company :".$row['Company']." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division :".$row['Division']." </font>
+				
 				<div class='row'>
 					<div class='col'>Behavioural : <b>" .$row['Behavioural']."</b> - (".$row['BehaviouralValue'].")</div>
 					<div class='col'> Language : <b>".$row['Language']."</b> - (".$row['LanguageValue'].")</div>
@@ -187,7 +187,7 @@ if ($conn)
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q1-37 : </strong>".$row['Language']."- (".$row['LanguageValue']."
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Q11 : </strong>".$row['CheckedLanguageValue']."- (".$row['CheckedLanguage'].")<br> 
 		  Date : ".$row['QnsDate']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email : ".$row['email']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reference ID : ".$row['qnr_data_ref']."
-                  </font>
+                  <br>Company :<strong>".$row['Company']."</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division :<strong>".$row['Division']."</strong></font>
 			</div>
 		</div>
 	</td> </tr>";
