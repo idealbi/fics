@@ -156,8 +156,8 @@ if ($conn)
 				$sql = "SELECT * FROM fics.Results where CompanyID='".$company."'  and  DivisionID ='".$division."'";
 			
 		}
-	
-	$result = sqlsrv_query($conn, $sql);
+	$sql_test ="SELECT * FROM fics.Results";
+	$result = sqlsrv_query($conn, $sql_test);
 	
  while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
 		{
