@@ -168,7 +168,7 @@ echo "Failed to connect to MySQL: " ;
             $QnsDate=$row_p['QnsDate'];
                 
             }?> 
-            
+ <div> b</div>           
 <?php  $LanguageDownFileName = $Name."_".$ref_id."_".$QnsDate."_".$Language."_Languageindicator.pdf";
 $BehaviouralDownFileName=$Name."_".$ref_id."_".$QnsDate."_".$Behavioural."_BehaviourPattern.pdf" ;?>            
       <ul class="list-group">
