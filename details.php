@@ -331,7 +331,7 @@ $result = sqlsrv_query($conn, $sql_p);
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
 			<div ><?php echo $BehaviouralDownFileName;?></div>
-			<div>Right align<br> <a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
+			<div><a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
 	  </div>
         <a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
 
