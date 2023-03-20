@@ -330,7 +330,7 @@ $result = sqlsrv_query($conn, $sql_p);
 </font></div>
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
-			<div >Left align</div>
+			<div ><?php echo $BehaviouralDownFileName;?></div>
 			<div>Right align<br> <a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
 	  </div>
         <a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
@@ -341,7 +341,7 @@ $result = sqlsrv_query($conn, $sql_p);
     
 <img src=" <?php echo $Behaviouralfile;?>" alt="" width="70%" height="400">
 
-
+</div>
 <hr>
 <br> 
 <a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
