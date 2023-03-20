@@ -168,7 +168,7 @@ echo "Failed to connect to MySQL: " ;
             $QnsDate=$row_p['QnsDate'];
                 
             }?> 
- <div> b</div>           
+           
 <?php  $LanguageDownFileName = $Name."_".$ref_id."_".$QnsDate."_".$Language."_Languageindicator.pdf";
 $BehaviouralDownFileName=$Name."_".$ref_id."_".$QnsDate."_".$Behavioural."_BehaviourPattern.pdf" ;?>            
       <ul class="list-group">
@@ -329,7 +329,7 @@ $result = sqlsrv_query($conn, $sql_p);
              </table>
 </font></div>
     <div class="col-9">
-       
+       <div> b</div> 
         <a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
 
 
