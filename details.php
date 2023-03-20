@@ -329,7 +329,10 @@ $result = sqlsrv_query($conn, $sql_p);
              </table>
 </font></div>
     <div class="col-9">
-       <div> b</div> 
+       <div class="d-flex justify-content-between bg-light">
+			<div >Left align</div>
+			<div>Right align</div>
+	  </div>
         <a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
 
 
