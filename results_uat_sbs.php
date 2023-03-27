@@ -145,9 +145,10 @@ img_logo {
      
      
    <?php
-$serverName = "mssql-115975-0.cloudclusters.net,19881";
-$connectionInfo = array( "Database"=>"idealbi_db", "UID"=>"web_app_user", "PWD"=>"P@ss1234");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$connectionInfo = array("UID" => "web_app_user", "pwd" => "P@ss1234", "Database" => "fics_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:srv-db-idealbi.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+ 
 echo "Test new 1";
 if( $conn ) {
      echo "Connection established.<br />";
