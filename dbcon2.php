@@ -1,5 +1,5 @@
 <?php
-$myServer = "41.76.215.228\SMARTBIZSOLZ\SQLEXPRESS";
+$myServer = "41.76.215.228\SQLEXPRESS";
 $myUser = "web_app_user";
 $myPass = "P@ss1234";
 $myDB = "fics_db";
