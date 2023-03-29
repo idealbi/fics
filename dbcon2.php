@@ -1,8 +1,8 @@
 <?php
-$myServer = "mssql-115975-0.cloudclusters.net,19881";
+$myServer = "41.76.215.228\SMARTBIZSOLZ\SQLEXPRESS";
 $myUser = "web_app_user";
 $myPass = "P@ss1234";
-$myDB = "idealbi_db";
+$myDB = "fics_db";
 
 //connection to the database
 $dbhandle = mssql_connect($myServer, $myUser, $myPass)
