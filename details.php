@@ -164,8 +164,10 @@ echo "Failed to connect to MySQL: " ;
               $Cellnum=$row_p['contactnumber'];
               $Language = $row_p['Language'];
             $Languagefile = "/img_data/".$row_p['Language']."_SW4Languageindicator.png";
+			$Languagepdffile = "/data/".$row_p['Language']."_SW4Languageindicator.pdf";
                $Behavioural= $row_p['Behavioural'];
              $Behaviouralfile = "/img_data/".$row_p['Behavioural']."_FICSBehaviourPattern.png";
+			  $Behaviouralpdffile = "/img_data/".$row_p['Behavioural']."_FICSBehaviourPattern.png";
             $QnsDate=$row_p['QnsDate'];
                 
             }?> 
@@ -332,7 +334,7 @@ $result = sqlsrv_query($conn, $sql_p);
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
 			<div ><?php echo $BehaviouralDownFileName;?></div>
-			<div><a href="<?php echo $Behaviouralfile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
+			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
 	  </div>
  
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -345,7 +347,7 @@ $result = sqlsrv_query($conn, $sql_p);
 
      <div class="d-flex justify-content-between bg-light">
 			<div ><?php echo $LanguageDownFileName;?></div>
-			<div><a href="<?php echo $Languagefile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
+			<div><a href="<?php echo $Languagepdffile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
 </div>
 	  </div>
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
