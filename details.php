@@ -117,7 +117,7 @@ img_logo {
     </a>
     
       <a class="btn btn-success btn-sm" href="logout.php" role="button">Logout</a><br>
-	  <a href="downloadpdf.php?file=IFSC_BehaviourPattern">Download PDF Now</a>
+	  
   </div>
 </nav>
 <div class="relative">
