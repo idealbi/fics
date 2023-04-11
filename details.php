@@ -167,7 +167,7 @@ echo "Failed to connect to MySQL: " ;
 			$Languagepdffile = "/data/".$row_p['Language']."_SW4Languageindicator.pdf";
                $Behavioural= $row_p['Behavioural'];
              $Behaviouralfile = "/img_data/".$row_p['Behavioural']."_FICSBehaviourPattern.png";
-			  $Behaviouralpdffile = "/img_data/".$row_p['Behavioural']."_FICSBehaviourPattern.png";
+			  $Behaviouralpdffile = "/data/".$row_p['Behavioural']."_FICSBehaviourPattern.png";
             $QnsDate=$row_p['QnsDate'];
                 
             }?> 
@@ -334,7 +334,8 @@ $result = sqlsrv_query($conn, $sql_p);
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
 			<div ><?php echo $BehaviouralDownFileName;?></div>
-			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
+			<div><a href="/data/CFIS_FICSBehaviourPattern.pdf" class="btn btn-info btn-sm" role="button" download="Test_farai.pdf">Download : <?php echo $Behavioural ?></a>
+			<a href="/data/CFIS_FICSBehaviourPattern.pdf" download="new_filename">Download File</a></div>
 	  </div>
  
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
