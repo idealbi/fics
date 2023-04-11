@@ -333,10 +333,8 @@ $result = sqlsrv_query($conn, $sql_p);
 </font></div>
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
-			<div ><?php echo $BehaviouralDownFileName;?></div>
-			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
 			
-	  </div>
+			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download1 : <?php echo $Behavioural ?></a></div>
  
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     
