@@ -334,7 +334,7 @@ $result = sqlsrv_query($conn, $sql_p);
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
 			<div ><?php echo $BehaviouralDownFileName;?></div>
-			<div><a href="/data/CFIS_FICSBehaviourPattern.pdf" class="btn btn-info btn-sm" role="button" download="Test_farai.pdf">Download : <?php echo $Behavioural ?></a>
+			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
 			<a href="/data/CFIS_FICSBehaviourPattern.pdf" download="new_filename">Download File</a></div>
 	  </div>
  
