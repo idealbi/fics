@@ -116,7 +116,8 @@ img_logo {
       <img src="/img/fics_bg_sm.png" alt="" width="160" height="50">
     </a>
     
-      <a class="btn btn-success btn-sm" href="logout.php" role="button">Logout</a>
+      <a class="btn btn-success btn-sm" href="logout.php" role="button">Logout</a><br>
+	  <a href="downloadpdf.php?file=IFSC_BehaviourPattern">Download PDF Now</a>
   </div>
 </nav>
 <div class="relative">
