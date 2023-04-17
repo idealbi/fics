@@ -334,26 +334,22 @@ $result = sqlsrv_query($conn, $sql_p);
     <div class="col-9">
        <div class="d-flex justify-content-between bg-light">
 			
-			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button" download="<?php echo $BehaviouralDownFileName;?>">Download1 : <?php echo $Behavioural ?></a></div>
+			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button btn-sm" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
  
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    
 <img src=" <?php echo $Behaviouralfile;?>" alt="" width="70%" height="400">
-
 </div>
-
+</div>
 <hr>
 
      <div class="d-flex justify-content-between bg-light">
-			<div ><?php echo $LanguageDownFileName;?></div>
+			
 			<div><a href="<?php echo $Languagepdffile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
 </div>
-	  </div>
+	
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 <img src="<?php echo $Languagefile;?>" alt="" width="70%" height="400">
 </div>
-
-
 </div>
   </div>
 
