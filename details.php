@@ -337,7 +337,7 @@ $result = sqlsrv_query($conn, $sql_p);
 			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button btn-sm" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
  
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-<img src=" <?php echo $Behaviouralfile;?>" alt="" width="70%" height="400">
+<img src=" <?php echo $Behaviouralfile;?>" alt="" width="100%" height="400">
 </div>
 </div>
 <hr>
@@ -348,7 +348,7 @@ $result = sqlsrv_query($conn, $sql_p);
 </div>
 	
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-<img src="<?php echo $Languagefile;?>" alt="" width="70%" height="400">
+<img src="<?php echo $Languagefile;?>" alt="" width="100%" height="400">
 </div>
 </div>
   </div>
