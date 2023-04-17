@@ -344,10 +344,10 @@ $result = sqlsrv_query($conn, $sql_p);
 
      <div class="d-flex justify-content-between bg-light">
 			
-			<div><a href="<?php echo $Languagepdffile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
-</div>
-	
+
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<a href="<?php echo $Languagepdffile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
+<br>
 <img src="<?php echo $Languagefile;?>" alt="" width="100%" height="400">
 </div>
 </div>
