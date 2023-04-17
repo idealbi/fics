@@ -332,7 +332,8 @@ $result = sqlsrv_query($conn, $sql_p);
              </table>
 </font></div>
     <div class="col-9">
-       <div class="d-flex justify-content-between bg-light">
+      
+	  
 		<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">	
 			<div><a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button btn-sm" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a></div>
  
@@ -341,18 +342,19 @@ $result = sqlsrv_query($conn, $sql_p);
 <br>
 <a href="<?php echo $Behaviouralpdffile;?>" class="btn btn-info btn-sm" role="button btn-sm" download="<?php echo $BehaviouralDownFileName;?>">Download : <?php echo $Behavioural ?></a>
 </div>
-</div>
+
+
 <hr>
 
-     <div class="d-flex justify-content-between bg-light">
+   
 			
 
-<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
 <a href="<?php echo $Languagepdffile;?>" class="btn btn-info btn-sm" role="button btn-sm "download="<?php echo $LanguageDownFileName;?>" >Download: <?php echo $Language;?></a>
 <br>
 <img src="<?php echo $Languagefile;?>" alt="" width="100%" height="400">
-</div>
-</div>
+
+
   </div>
 
 
